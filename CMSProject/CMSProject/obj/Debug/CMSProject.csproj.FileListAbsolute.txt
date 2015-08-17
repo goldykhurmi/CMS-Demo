@@ -1,0 +1,240 @@
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\CMSProject.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\CMSProject.pdb
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\Antlr3.Runtime.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\DotNetOpenAuth.AspNet.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\DotNetOpenAuth.Core.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\DotNetOpenAuth.OAuth.Consumer.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\DotNetOpenAuth.OAuth.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\DotNetOpenAuth.OpenId.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\EntityFramework.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\Microsoft.Web.Infrastructure.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\Microsoft.Web.WebPages.OAuth.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\Newtonsoft.Json.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\System.Net.Http.Formatting.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\System.Web.Helpers.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\System.Web.Http.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\System.Web.Http.WebHost.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\System.Web.Mvc.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\System.Web.Optimization.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\System.Web.Razor.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\System.Web.WebPages.Deployment.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\System.Web.WebPages.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\System.Web.WebPages.Razor.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\WebGrease.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\WebMatrix.Data.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\WebMatrix.WebData.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\EntityFramework.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\Newtonsoft.Json.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\System.Net.Http.Formatting.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\System.Web.Helpers.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\System.Web.Http.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\System.Web.Http.WebHost.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\System.Web.Mvc.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\System.Web.Razor.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\System.Web.WebPages.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\System.Web.WebPages.Deployment.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\System.Web.WebPages.Razor.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\WebMatrix.Data.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\Microsoft.Web.WebPages.OAuth.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\WebMatrix.WebData.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\DotNetOpenAuth.AspNet.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\DotNetOpenAuth.Core.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\DotNetOpenAuth.OAuth.Consumer.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\DotNetOpenAuth.OAuth.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\DotNetOpenAuth.OpenId.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\obj\Debug\CMSProject.csprojResolveAssemblyReference.cache
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\obj\Debug\CMSProject.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\CMSProject\obj\Debug\CMSProject.pdb
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\CMSProject.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\CMSProject.pdb
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\Antlr3.Runtime.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\DotNetOpenAuth.AspNet.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\DotNetOpenAuth.Core.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\DotNetOpenAuth.OAuth.Consumer.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\DotNetOpenAuth.OAuth.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\DotNetOpenAuth.OpenId.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\EntityFramework.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\Microsoft.Web.Infrastructure.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\Microsoft.Web.WebPages.OAuth.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\Newtonsoft.Json.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\System.Net.Http.Formatting.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\System.Web.Helpers.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\System.Web.Http.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\System.Web.Http.WebHost.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\System.Web.Mvc.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\System.Web.Optimization.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\System.Web.Razor.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\System.Web.WebPages.Deployment.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\System.Web.WebPages.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\System.Web.WebPages.Razor.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\WebGrease.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\WebMatrix.Data.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\WebMatrix.WebData.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\EntityFramework.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\Newtonsoft.Json.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\System.Net.Http.Formatting.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\System.Web.Helpers.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\System.Web.Http.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\System.Web.Http.WebHost.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\System.Web.Mvc.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\System.Web.Razor.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\System.Web.WebPages.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\System.Web.WebPages.Deployment.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\System.Web.WebPages.Razor.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\WebMatrix.Data.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\Microsoft.Web.WebPages.OAuth.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\WebMatrix.WebData.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\DotNetOpenAuth.AspNet.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\DotNetOpenAuth.Core.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\DotNetOpenAuth.OAuth.Consumer.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\DotNetOpenAuth.OAuth.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\DotNetOpenAuth.OpenId.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\XpressWebSolutionz\CMSProject\CMSProject\obj\Debug\CMSProject.dll
+E:\XpressWebSolutionz\CMSProject\CMSProject\obj\Debug\CMSProject.pdb
+E:\XpressWebSolutionz\CMSProject\CMSProject\obj\Debug\CMSProject.csprojResolveAssemblyReference.cache
+E:\xpress Solutions\CMSProject\CMSProject\bin\CMSProject.dll
+E:\xpress Solutions\CMSProject\CMSProject\bin\CMSProject.pdb
+E:\xpress Solutions\CMSProject\CMSProject\bin\Antlr3.Runtime.dll
+E:\xpress Solutions\CMSProject\CMSProject\bin\DotNetOpenAuth.AspNet.dll
+E:\xpress Solutions\CMSProject\CMSProject\bin\DotNetOpenAuth.Core.dll
+E:\xpress Solutions\CMSProject\CMSProject\bin\DotNetOpenAuth.OAuth.Consumer.dll
+E:\xpress Solutions\CMSProject\CMSProject\bin\DotNetOpenAuth.OAuth.dll
+E:\xpress Solutions\CMSProject\CMSProject\bin\DotNetOpenAuth.OpenId.dll
+E:\xpress Solutions\CMSProject\CMSProject\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+E:\xpress Solutions\CMSProject\CMSProject\bin\EntityFramework.dll
+E:\xpress Solutions\CMSProject\CMSProject\bin\Microsoft.Web.Infrastructure.dll
+E:\xpress Solutions\CMSProject\CMSProject\bin\Microsoft.Web.WebPages.OAuth.dll
+E:\xpress Solutions\CMSProject\CMSProject\bin\Newtonsoft.Json.dll
+E:\xpress Solutions\CMSProject\CMSProject\bin\System.Net.Http.Formatting.dll
+E:\xpress Solutions\CMSProject\CMSProject\bin\System.Web.Helpers.dll
+E:\xpress Solutions\CMSProject\CMSProject\bin\System.Web.Http.dll
+E:\xpress Solutions\CMSProject\CMSProject\bin\System.Web.Http.WebHost.dll
+E:\xpress Solutions\CMSProject\CMSProject\bin\System.Web.Mvc.dll
+E:\xpress Solutions\CMSProject\CMSProject\bin\System.Web.Optimization.dll
+E:\xpress Solutions\CMSProject\CMSProject\bin\System.Web.Razor.dll
+E:\xpress Solutions\CMSProject\CMSProject\bin\System.Web.WebPages.Deployment.dll
+E:\xpress Solutions\CMSProject\CMSProject\bin\System.Web.WebPages.dll
+E:\xpress Solutions\CMSProject\CMSProject\bin\System.Web.WebPages.Razor.dll
+E:\xpress Solutions\CMSProject\CMSProject\bin\WebGrease.dll
+E:\xpress Solutions\CMSProject\CMSProject\bin\WebMatrix.Data.dll
+E:\xpress Solutions\CMSProject\CMSProject\bin\WebMatrix.WebData.dll
+E:\xpress Solutions\CMSProject\CMSProject\bin\EntityFramework.xml
+E:\xpress Solutions\CMSProject\CMSProject\bin\Newtonsoft.Json.xml
+E:\xpress Solutions\CMSProject\CMSProject\bin\System.Net.Http.Formatting.xml
+E:\xpress Solutions\CMSProject\CMSProject\bin\System.Web.Helpers.xml
+E:\xpress Solutions\CMSProject\CMSProject\bin\System.Web.Http.xml
+E:\xpress Solutions\CMSProject\CMSProject\bin\System.Web.Http.WebHost.xml
+E:\xpress Solutions\CMSProject\CMSProject\bin\System.Web.Mvc.xml
+E:\xpress Solutions\CMSProject\CMSProject\bin\System.Web.Razor.xml
+E:\xpress Solutions\CMSProject\CMSProject\bin\System.Web.WebPages.xml
+E:\xpress Solutions\CMSProject\CMSProject\bin\System.Web.WebPages.Deployment.xml
+E:\xpress Solutions\CMSProject\CMSProject\bin\System.Web.WebPages.Razor.xml
+E:\xpress Solutions\CMSProject\CMSProject\bin\WebMatrix.Data.xml
+E:\xpress Solutions\CMSProject\CMSProject\bin\Microsoft.Web.WebPages.OAuth.xml
+E:\xpress Solutions\CMSProject\CMSProject\bin\WebMatrix.WebData.xml
+E:\xpress Solutions\CMSProject\CMSProject\bin\DotNetOpenAuth.AspNet.xml
+E:\xpress Solutions\CMSProject\CMSProject\bin\DotNetOpenAuth.Core.xml
+E:\xpress Solutions\CMSProject\CMSProject\bin\DotNetOpenAuth.OAuth.Consumer.xml
+E:\xpress Solutions\CMSProject\CMSProject\bin\DotNetOpenAuth.OAuth.xml
+E:\xpress Solutions\CMSProject\CMSProject\bin\DotNetOpenAuth.OpenId.xml
+E:\xpress Solutions\CMSProject\CMSProject\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\xpress Solutions\CMSProject\CMSProject\obj\Debug\CMSProject.dll
+E:\xpress Solutions\CMSProject\CMSProject\obj\Debug\CMSProject.pdb
+E:\xpress Solutions\CMSProject\CMSProject\obj\Debug\CMSProject.csprojResolveAssemblyReference.cache
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\CMSProject.dll
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\CMSProject.pdb
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\Antlr3.Runtime.dll
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\DotNetOpenAuth.AspNet.dll
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\DotNetOpenAuth.Core.dll
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\DotNetOpenAuth.OAuth.Consumer.dll
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\DotNetOpenAuth.OAuth.dll
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\DotNetOpenAuth.OpenId.dll
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\EntityFramework.dll
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\Microsoft.Web.Infrastructure.dll
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\Microsoft.Web.WebPages.OAuth.dll
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\Newtonsoft.Json.dll
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\System.Net.Http.Formatting.dll
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\System.Web.Helpers.dll
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\System.Web.Http.dll
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\System.Web.Http.WebHost.dll
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\System.Web.Mvc.dll
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\System.Web.Optimization.dll
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\System.Web.Razor.dll
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\System.Web.WebPages.Deployment.dll
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\System.Web.WebPages.dll
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\System.Web.WebPages.Razor.dll
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\WebGrease.dll
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\WebMatrix.Data.dll
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\WebMatrix.WebData.dll
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\EntityFramework.xml
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\Newtonsoft.Json.xml
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\System.Net.Http.Formatting.xml
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\System.Web.Helpers.xml
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\System.Web.Http.xml
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\System.Web.Http.WebHost.xml
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\System.Web.Mvc.xml
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\System.Web.Razor.xml
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\System.Web.WebPages.xml
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\System.Web.WebPages.Deployment.xml
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\System.Web.WebPages.Razor.xml
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\WebMatrix.Data.xml
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\Microsoft.Web.WebPages.OAuth.xml
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\WebMatrix.WebData.xml
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\DotNetOpenAuth.AspNet.xml
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\DotNetOpenAuth.Core.xml
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\DotNetOpenAuth.OAuth.Consumer.xml
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\DotNetOpenAuth.OAuth.xml
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\DotNetOpenAuth.OpenId.xml
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\obj\Debug\CMSProject.csprojResolveAssemblyReference.cache
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\obj\Debug\CMSProject.dll
+E:\XpressWebSolutionz\CMSProject21022014-636pm\CMSProject\CMSProject\obj\Debug\CMSProject.pdb
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\CMSProject.dll.config
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\CMSProject.dll
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\CMSProject.pdb
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\Antlr3.Runtime.dll
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\DotNetOpenAuth.AspNet.dll
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\DotNetOpenAuth.Core.dll
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\DotNetOpenAuth.OAuth.Consumer.dll
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\DotNetOpenAuth.OAuth.dll
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\DotNetOpenAuth.OpenId.dll
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\EntityFramework.dll
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\Microsoft.Web.Infrastructure.dll
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\Microsoft.Web.WebPages.OAuth.dll
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\Newtonsoft.Json.dll
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\System.Web.Helpers.dll
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\System.Web.Mvc.dll
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\System.Web.Optimization.dll
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\System.Web.Razor.dll
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\System.Web.WebPages.Deployment.dll
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\System.Web.WebPages.dll
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\System.Web.WebPages.Razor.dll
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\WebGrease.dll
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\WebMatrix.Data.dll
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\WebMatrix.WebData.dll
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\EntityFramework.xml
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\Newtonsoft.Json.xml
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\System.Web.Helpers.xml
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\System.Web.Mvc.xml
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\System.Web.Razor.xml
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\System.Web.WebPages.xml
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\System.Web.WebPages.Deployment.xml
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\System.Web.WebPages.Razor.xml
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\WebMatrix.Data.xml
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\Microsoft.Web.WebPages.OAuth.xml
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\WebMatrix.WebData.xml
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\DotNetOpenAuth.AspNet.xml
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\DotNetOpenAuth.Core.xml
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\DotNetOpenAuth.OAuth.Consumer.xml
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\DotNetOpenAuth.OAuth.xml
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\DotNetOpenAuth.OpenId.xml
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\obj\Debug\CMSProject.csprojResolveAssemblyReference.cache
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\obj\Debug\CMSProject.dll
+E:\XWS BitBucket\classes-managememt-system\CMSProject\CMSProject\obj\Debug\CMSProject.pdb

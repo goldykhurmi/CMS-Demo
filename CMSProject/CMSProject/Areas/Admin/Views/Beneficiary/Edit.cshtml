@@ -1,0 +1,137 @@
+﻿@model CMSProject.Areas.Admin.Models.Beneficiary
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<!--Start Section Layout-->
+<div class="box-header well" data-original-title>
+    <h2><i class="icon-user"></i>@ViewBag.CurrentPage</h2>
+    @*<div class="box-icon">
+							<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+							<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+						</div>*@
+</div>
+<div class="box-content">
+
+    <section>
+        <!----------------------------->
+
+
+     
+
+               <form action=@Url.Content("~/Admin/Beneficiary/Edit") class="form-horizontal" method="post" enctype="multipart/form-data">
+            @Html.ValidationSummary(true)
+
+            <fieldset>
+                <legend></legend>
+
+                @Html.HiddenFor(model => model.BeneficiaryID)
+
+                <div class="control-group">
+                    @Html.LabelFor(model => model.IdCardNumber, new { @class = "control-label" })
+                
+                <div class="controls">
+                    @Html.EditorFor(model => model.IdCardNumber, new { @class = "span6 typeahead" })
+                    @Html.ValidationMessageFor(model => model.IdCardNumber)
+                </div>
+                    </div>
+                <div class="control-group">
+                    @Html.LabelFor(model => model.Names, new { @class = "control-label" })
+                
+                <div class="controls">
+                    @Html.EditorFor(model => model.Names, new { @class = "span6 typeahead" })
+                    @Html.ValidationMessageFor(model => model.Names)
+                </div>
+                    </div>
+                <div class="control-group">
+                    @Html.LabelFor(model => model.LastNames, new { @class = "control-label" })
+                
+                <div class="controls">
+                    @Html.EditorFor(model => model.LastNames, new { @class = "span6 typeahead" })
+                    @Html.ValidationMessageFor(model => model.LastNames)
+                </div>
+                    </div>
+                <div class="control-group">
+                    @Html.LabelFor(model => model.Sex, new { @class = "control-label" })
+                
+                <div class="controls">
+                    @Html.EditorFor(model => model.Sex, new { @class = "span6 typeahead" })
+                    @Html.ValidationMessageFor(model => model.Sex)
+                </div>
+                    </div>
+                <div class="control-group">
+                    @Html.LabelFor(model => model.Address, new { @class = "control-label" })
+                
+                <div class="controls">
+                    @Html.EditorFor(model => model.Address, new { @class = "span6 typeahead" })
+                    @Html.ValidationMessageFor(model => model.Address)
+                </div>
+                    </div>
+                <div class="control-group">
+                    @Html.LabelFor(model => model.CommunityID, "Community", new { @class = "control-label" })
+                
+                <div class="controls">
+                    @Html.DropDownList("CommunityID", String.Empty)
+                    @Html.ValidationMessageFor(model => model.CommunityID)
+                </div>
+                    </div>
+                <div class="control-group">
+                    @Html.LabelFor(model => model.Phone, new { @class = "control-label" })
+                
+                <div class="controls">
+                    @Html.EditorFor(model => model.Phone, new { @class = "span6 typeahead" })
+                    @Html.ValidationMessageFor(model => model.Phone)
+                </div>
+                    </div>
+                <div class="control-group">
+                    @Html.LabelFor(model => model.Email, new { @class = "control-label" })
+                
+                <div class="controls">
+                    @Html.EditorFor(model => model.Email, new { @class = "span6 typeahead" })
+                    @Html.ValidationMessageFor(model => model.Email)
+                </div>
+</div>
+                <div class="control-group">
+                    @Html.LabelFor(model => model.DateofRecord, new { @class = "control-label" })
+                
+                <div class="controls">
+                    @Html.EditorFor(model => model.DateofRecord, new { @class = "span6 typeahead" })
+                    @Html.ValidationMessageFor(model => model.DateofRecord)
+                </div>
+                    </div>
+                <div class="control-group">
+                    @Html.LabelFor(model => model.ImagePath, new { @class = "control-label" })
+                
+                <div class="controls">
+                    @Html.EditorFor(model => model.ImagePath, new { @class = "span6 typeahead" })
+                    @Html.ValidationMessageFor(model => model.ImagePath)
+                </div>
+                    </div>
+                <div class="control-group">
+                    @Html.LabelFor(model => model.TypeOfBeneficiaryID, "TypeOfBeneficiary", new { @class = "control-label" })
+                
+                <div class="controls">
+                    @Html.DropDownList("TypeOfBeneficiaryID", String.Empty)
+                    @Html.ValidationMessageFor(model => model.TypeOfBeneficiaryID)
+                </div>
+                    </div>
+                <div class="form-actions">
+                    <input type="submit" class="btn btn-primary" value="Save" />
+                    <button type="reset" class="btn">Clear</button>
+                </div>
+            </fieldset>
+        </form>
+
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+
+        @section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
+        }
+        <!--Close Section Layout-->
+    </section>
+</div>
+<!---->

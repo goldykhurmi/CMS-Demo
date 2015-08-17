@@ -1,0 +1,53 @@
+﻿@model CMSProject.Areas.Admin.Models.Teacher
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<!--Start Section Layout-->
+<div class="box-header well" data-original-title>
+    <h2><i class="icon-user"></i>@ViewBag.CurrentPage</h2>
+    @*<div class="box-icon">
+							<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+							<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+						</div>*@
+</div>
+<div class="box-content">
+
+    <section>
+        <!----------------------------->
+
+
+        <fieldset>
+            <legend>Teacher</legend>
+
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.Name)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.Name)
+            </div>
+
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.LastName)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.LastName)
+            </div>
+
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.Photo)
+            </div>
+            <div class="display-field">
+                <img src="@Url.Content(Model.Photo)" style="width:100px;" />
+            </div>
+        </fieldset>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.TeacherID }) |
+    @Html.ActionLink("Back to List", "Index")
+        </p>
+        <!--Close Section Layout-->
+    </section>
+</div>
+<!---->

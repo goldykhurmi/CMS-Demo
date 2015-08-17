@@ -1,0 +1,525 @@
+USE [CMS]
+GO
+/****** Object:  Table [dbo].[ProductiveSector]    Script Date: 02/19/2014 14:54:41 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[ProductiveSector](
+	[SectorId] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_ProductiveSector] PRIMARY KEY CLUSTERED 
+(
+	[SectorId] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+SET IDENTITY_INSERT [dbo].[ProductiveSector] ON
+INSERT [dbo].[ProductiveSector] ([SectorId], [Name]) VALUES (1, N'Testing')
+SET IDENTITY_INSERT [dbo].[ProductiveSector] OFF
+/****** Object:  Table [dbo].[Projects]    Script Date: 02/19/2014 14:54:41 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Projects](
+	[ProjectID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](50) NULL,
+ CONSTRAINT [PK_Projects] PRIMARY KEY CLUSTERED 
+(
+	[ProjectID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+SET IDENTITY_INSERT [dbo].[Projects] ON
+INSERT [dbo].[Projects] ([ProjectID], [Name]) VALUES (1, N'Testing')
+SET IDENTITY_INSERT [dbo].[Projects] OFF
+/****** Object:  Table [dbo].[Profiles]    Script Date: 02/19/2014 14:54:41 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Profiles](
+	[ProfileID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](50) NOT NULL,
+	[Description] [varchar](max) NOT NULL,
+ CONSTRAINT [PK_Profiles] PRIMARY KEY CLUSTERED 
+(
+	[ProfileID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+SET IDENTITY_INSERT [dbo].[Profiles] ON
+INSERT [dbo].[Profiles] ([ProfileID], [Name], [Description]) VALUES (2, N'Testing', N'Testing')
+INSERT [dbo].[Profiles] ([ProfileID], [Name], [Description]) VALUES (3, N'Testing', N'Testing')
+SET IDENTITY_INSERT [dbo].[Profiles] OFF
+/****** Object:  Table [dbo].[BeneficiaryClasses]    Script Date: 02/19/2014 14:54:41 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[BeneficiaryClasses](
+	[BeneficiaryClassID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](50) NOT NULL,
+	[Description] [varchar](max) NOT NULL,
+ CONSTRAINT [PK_Classes] PRIMARY KEY CLUSTERED 
+(
+	[BeneficiaryClassID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+SET IDENTITY_INSERT [dbo].[BeneficiaryClasses] ON
+INSERT [dbo].[BeneficiaryClasses] ([BeneficiaryClassID], [Name], [Description]) VALUES (2, N'Testing', N'Testing')
+INSERT [dbo].[BeneficiaryClasses] ([BeneficiaryClassID], [Name], [Description]) VALUES (3, N'Testing', N'Testing')
+SET IDENTITY_INSERT [dbo].[BeneficiaryClasses] OFF
+/****** Object:  Table [dbo].[Municipalities]    Script Date: 02/19/2014 14:54:41 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Municipalities](
+	[MunicipalID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](50) NULL,
+ CONSTRAINT [PK_Municipalities] PRIMARY KEY CLUSTERED 
+(
+	[MunicipalID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+SET IDENTITY_INSERT [dbo].[Municipalities] ON
+INSERT [dbo].[Municipalities] ([MunicipalID], [Name]) VALUES (1, N'Testing')
+SET IDENTITY_INSERT [dbo].[Municipalities] OFF
+/****** Object:  Table [dbo].[TypeOfBeneficiaries]    Script Date: 02/19/2014 14:54:41 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[TypeOfBeneficiaries](
+	[TypeOfBeneficiaryID] [int] IDENTITY(1,1) NOT NULL,
+	[Description] [varchar](max) NOT NULL,
+ CONSTRAINT [PK_TypeOfBeneficiary] PRIMARY KEY CLUSTERED 
+(
+	[TypeOfBeneficiaryID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+SET IDENTITY_INSERT [dbo].[TypeOfBeneficiaries] ON
+INSERT [dbo].[TypeOfBeneficiaries] ([TypeOfBeneficiaryID], [Description]) VALUES (1, N'ABC')
+SET IDENTITY_INSERT [dbo].[TypeOfBeneficiaries] OFF
+/****** Object:  Table [dbo].[Teachers]    Script Date: 02/19/2014 14:54:41 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Teachers](
+	[TeacherID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](50) NOT NULL,
+	[LastName] [varchar](50) NOT NULL,
+	[Photo] [varchar](500) NOT NULL,
+ CONSTRAINT [PK_Teachers] PRIMARY KEY CLUSTERED 
+(
+	[TeacherID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+SET IDENTITY_INSERT [dbo].[Teachers] ON
+INSERT [dbo].[Teachers] ([TeacherID], [Name], [LastName], [Photo]) VALUES (1, N'Testing', N'Testing', N'Testing')
+INSERT [dbo].[Teachers] ([TeacherID], [Name], [LastName], [Photo]) VALUES (2, N'Testing', N'Testing', N'Testing')
+SET IDENTITY_INSERT [dbo].[Teachers] OFF
+/****** Object:  Table [dbo].[SessionStatuses]    Script Date: 02/19/2014 14:54:41 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[SessionStatuses](
+	[SessionStatusID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](50) NOT NULL,
+	[Description] [varchar](max) NOT NULL,
+	[Completed] [bit] NOT NULL,
+ CONSTRAINT [PK_SessionStatuss] PRIMARY KEY CLUSTERED 
+(
+	[SessionStatusID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+SET IDENTITY_INSERT [dbo].[SessionStatuses] ON
+INSERT [dbo].[SessionStatuses] ([SessionStatusID], [Name], [Description], [Completed]) VALUES (1, N'Testing', N'Testing', 1)
+SET IDENTITY_INSERT [dbo].[SessionStatuses] OFF
+/****** Object:  Table [dbo].[Sessions]    Script Date: 02/19/2014 14:54:41 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Sessions](
+	[SessionID] [int] IDENTITY(1,1) NOT NULL,
+	[BeneficiaryClassID] [int] NOT NULL,
+	[InitialDate] [datetime] NOT NULL,
+	[EndDate] [datetime] NOT NULL,
+	[Venue] [varchar](50) NOT NULL,
+	[Place] [varchar](50) NOT NULL,
+	[TeacherID] [int] NOT NULL,
+	[ProjectID] [int] NOT NULL,
+	[SessionStatusID] [int] NOT NULL,
+ CONSTRAINT [PK_Sessions] PRIMARY KEY CLUSTERED 
+(
+	[SessionID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+SET IDENTITY_INSERT [dbo].[Sessions] ON
+INSERT [dbo].[Sessions] ([SessionID], [BeneficiaryClassID], [InitialDate], [EndDate], [Venue], [Place], [TeacherID], [ProjectID], [SessionStatusID]) VALUES (1, 2, CAST(0x0000A2A700000000 AS DateTime), CAST(0x0000A2A700000000 AS DateTime), N'Testing', N'Testing', 1, 1, 1)
+SET IDENTITY_INSERT [dbo].[Sessions] OFF
+/****** Object:  Table [dbo].[BeneficiaryProfiles]    Script Date: 02/19/2014 14:54:41 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[BeneficiaryProfiles](
+	[TypeOfBenefID] [int] NOT NULL,
+	[ProfileID] [int] NOT NULL,
+ CONSTRAINT [PK_BeneficiaryProfiles] PRIMARY KEY CLUSTERED 
+(
+	[TypeOfBenefID] ASC,
+	[ProfileID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[TypeOfBeneficiaryProfile]    Script Date: 02/19/2014 14:54:41 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[TypeOfBeneficiaryProfile](
+	[TypeOfBeneficiaryID] [int] NOT NULL,
+	[ProfileID] [int] NOT NULL,
+ CONSTRAINT [PK_TypeOfBeneficiaryProfile] PRIMARY KEY CLUSTERED 
+(
+	[TypeOfBeneficiaryID] ASC,
+	[ProfileID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Communities]    Script Date: 02/19/2014 14:54:41 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Communities](
+	[CommunityID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](50) NOT NULL,
+	[MunicipalID] [int] NULL,
+ CONSTRAINT [PK_Communidades] PRIMARY KEY CLUSTERED 
+(
+	[CommunityID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+SET IDENTITY_INSERT [dbo].[Communities] ON
+INSERT [dbo].[Communities] ([CommunityID], [Name], [MunicipalID]) VALUES (1, N'Testing', 1)
+SET IDENTITY_INSERT [dbo].[Communities] OFF
+/****** Object:  Table [dbo].[ProfileClasses]    Script Date: 02/19/2014 14:54:41 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ProfileClasses](
+	[ProfileID] [int] NOT NULL,
+	[ClassID] [int] NOT NULL,
+ CONSTRAINT [PK_ProfileClasses] PRIMARY KEY CLUSTERED 
+(
+	[ProfileID] ASC,
+	[ClassID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Organizations]    Script Date: 02/19/2014 14:54:41 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Organizations](
+	[OrganizationID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](50) NOT NULL,
+	[CommunityID] [int] NOT NULL,
+	[YearOfFormalization] [varchar](2000) NOT NULL,
+	[YearofFoundation] [varchar](200) NOT NULL,
+	[NoOfEnrolledMembers] [int] NULL,
+	[NoOfActiveMembers] [int] NULL,
+ CONSTRAINT [PK_Organizations] PRIMARY KEY CLUSTERED 
+(
+	[OrganizationID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+SET IDENTITY_INSERT [dbo].[Organizations] ON
+INSERT [dbo].[Organizations] ([OrganizationID], [Name], [CommunityID], [YearOfFormalization], [YearofFoundation], [NoOfEnrolledMembers], [NoOfActiveMembers]) VALUES (1, N'Testing', 1, N'Testing', N'Testing', 2, 2)
+SET IDENTITY_INSERT [dbo].[Organizations] OFF
+/****** Object:  Table [dbo].[Beneficiaries]    Script Date: 02/19/2014 14:54:41 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Beneficiaries](
+	[BeneficiaryID] [int] IDENTITY(1,1) NOT NULL,
+	[IdCardNumber] [varchar](50) NOT NULL,
+	[Names] [varchar](50) NOT NULL,
+	[LastNames] [varchar](50) NOT NULL,
+	[Sex] [varchar](50) NOT NULL,
+	[Address] [varchar](max) NOT NULL,
+	[CommunityID] [int] NOT NULL,
+	[Phone] [varchar](50) NOT NULL,
+	[Email] [varchar](50) NOT NULL,
+	[DateofRecord] [datetime] NOT NULL,
+	[ImagePath] [varchar](50) NOT NULL,
+	[TypeOfBeneficiaryID] [int] NULL,
+ CONSTRAINT [PK_Beneficiarys] PRIMARY KEY CLUSTERED 
+(
+	[BeneficiaryID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+SET IDENTITY_INSERT [dbo].[Beneficiaries] ON
+INSERT [dbo].[Beneficiaries] ([BeneficiaryID], [IdCardNumber], [Names], [LastNames], [Sex], [Address], [CommunityID], [Phone], [Email], [DateofRecord], [ImagePath], [TypeOfBeneficiaryID]) VALUES (1, N'12', N'Testing', N'Testing', N'Male', N'Testing', 1, N'9915257180', N'jarnail.xpress@gmail.com', CAST(0x0000A2A700000000 AS DateTime), N'Testing', 1)
+SET IDENTITY_INSERT [dbo].[Beneficiaries] OFF
+/****** Object:  Table [dbo].[SessionAttachments]    Script Date: 02/19/2014 14:54:41 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[SessionAttachments](
+	[SessionAttachmentID] [int] IDENTITY(1,1) NOT NULL,
+	[SessionID] [int] NOT NULL,
+	[AttachedDocumentURL] [varchar](500) NOT NULL,
+	[Description] [varchar](max) NOT NULL,
+ CONSTRAINT [PK_Table_1] PRIMARY KEY CLUSTERED 
+(
+	[SessionAttachmentID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[BeneficiaryOrganization]    Script Date: 02/19/2014 14:54:41 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[BeneficiaryOrganization](
+	[BeneficiaryID] [int] NOT NULL,
+	[OrganizationID] [int] NOT NULL,
+ CONSTRAINT [PK_BeneficiaryEntity] PRIMARY KEY CLUSTERED 
+(
+	[BeneficiaryID] ASC,
+	[OrganizationID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[SessionParticipants]    Script Date: 02/19/2014 14:54:41 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[SessionParticipants](
+	[SessionID] [int] IDENTITY(1,1) NOT NULL,
+	[BeneficiaryID] [int] NOT NULL,
+	[Attended] [bit] NOT NULL,
+	[Completed] [bit] NOT NULL,
+ CONSTRAINT [PK_SessionParticipants] PRIMARY KEY CLUSTERED 
+(
+	[SessionID] ASC,
+	[BeneficiaryID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[BeneficiarySector]    Script Date: 02/19/2014 14:54:41 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[BeneficiarySector](
+	[BeneficiaryID] [int] NOT NULL,
+	[SectorID] [int] NOT NULL,
+ CONSTRAINT [PK_BeneficiarySector] PRIMARY KEY CLUSTERED 
+(
+	[BeneficiaryID] ASC,
+	[SectorID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+INSERT [dbo].[BeneficiarySector] ([BeneficiaryID], [SectorID]) VALUES (1, 1)
+/****** Object:  ForeignKey [FK_Beneficiaries_Communities1]    Script Date: 02/19/2014 14:54:41 ******/
+ALTER TABLE [dbo].[Beneficiaries]  WITH CHECK ADD  CONSTRAINT [FK_Beneficiaries_Communities1] FOREIGN KEY([CommunityID])
+REFERENCES [dbo].[Communities] ([CommunityID])
+GO
+ALTER TABLE [dbo].[Beneficiaries] CHECK CONSTRAINT [FK_Beneficiaries_Communities1]
+GO
+/****** Object:  ForeignKey [FK_Beneficiaries_TypeOfBeneficiaries]    Script Date: 02/19/2014 14:54:41 ******/
+ALTER TABLE [dbo].[Beneficiaries]  WITH CHECK ADD  CONSTRAINT [FK_Beneficiaries_TypeOfBeneficiaries] FOREIGN KEY([TypeOfBeneficiaryID])
+REFERENCES [dbo].[TypeOfBeneficiaries] ([TypeOfBeneficiaryID])
+GO
+ALTER TABLE [dbo].[Beneficiaries] CHECK CONSTRAINT [FK_Beneficiaries_TypeOfBeneficiaries]
+GO
+/****** Object:  ForeignKey [FK_BeneficiaryOrganization_Beneficiaries]    Script Date: 02/19/2014 14:54:41 ******/
+ALTER TABLE [dbo].[BeneficiaryOrganization]  WITH CHECK ADD  CONSTRAINT [FK_BeneficiaryOrganization_Beneficiaries] FOREIGN KEY([BeneficiaryID])
+REFERENCES [dbo].[Beneficiaries] ([BeneficiaryID])
+GO
+ALTER TABLE [dbo].[BeneficiaryOrganization] CHECK CONSTRAINT [FK_BeneficiaryOrganization_Beneficiaries]
+GO
+/****** Object:  ForeignKey [FK_BeneficiaryOrganization_Organizations]    Script Date: 02/19/2014 14:54:41 ******/
+ALTER TABLE [dbo].[BeneficiaryOrganization]  WITH CHECK ADD  CONSTRAINT [FK_BeneficiaryOrganization_Organizations] FOREIGN KEY([OrganizationID])
+REFERENCES [dbo].[Organizations] ([OrganizationID])
+GO
+ALTER TABLE [dbo].[BeneficiaryOrganization] CHECK CONSTRAINT [FK_BeneficiaryOrganization_Organizations]
+GO
+/****** Object:  ForeignKey [FK_BeneficiaryProfiles_Profiles]    Script Date: 02/19/2014 14:54:41 ******/
+ALTER TABLE [dbo].[BeneficiaryProfiles]  WITH CHECK ADD  CONSTRAINT [FK_BeneficiaryProfiles_Profiles] FOREIGN KEY([ProfileID])
+REFERENCES [dbo].[Profiles] ([ProfileID])
+GO
+ALTER TABLE [dbo].[BeneficiaryProfiles] CHECK CONSTRAINT [FK_BeneficiaryProfiles_Profiles]
+GO
+/****** Object:  ForeignKey [FK_BeneficiaryProfiles_TypeOfBeneficiary]    Script Date: 02/19/2014 14:54:41 ******/
+ALTER TABLE [dbo].[BeneficiaryProfiles]  WITH CHECK ADD  CONSTRAINT [FK_BeneficiaryProfiles_TypeOfBeneficiary] FOREIGN KEY([TypeOfBenefID])
+REFERENCES [dbo].[TypeOfBeneficiaries] ([TypeOfBeneficiaryID])
+GO
+ALTER TABLE [dbo].[BeneficiaryProfiles] CHECK CONSTRAINT [FK_BeneficiaryProfiles_TypeOfBeneficiary]
+GO
+/****** Object:  ForeignKey [FK_BeneficiarySector_Beneficiaries]    Script Date: 02/19/2014 14:54:41 ******/
+ALTER TABLE [dbo].[BeneficiarySector]  WITH CHECK ADD  CONSTRAINT [FK_BeneficiarySector_Beneficiaries] FOREIGN KEY([BeneficiaryID])
+REFERENCES [dbo].[Beneficiaries] ([BeneficiaryID])
+GO
+ALTER TABLE [dbo].[BeneficiarySector] CHECK CONSTRAINT [FK_BeneficiarySector_Beneficiaries]
+GO
+/****** Object:  ForeignKey [FK_BeneficiarySector_ProductiveSector]    Script Date: 02/19/2014 14:54:41 ******/
+ALTER TABLE [dbo].[BeneficiarySector]  WITH CHECK ADD  CONSTRAINT [FK_BeneficiarySector_ProductiveSector] FOREIGN KEY([SectorID])
+REFERENCES [dbo].[ProductiveSector] ([SectorId])
+GO
+ALTER TABLE [dbo].[BeneficiarySector] CHECK CONSTRAINT [FK_BeneficiarySector_ProductiveSector]
+GO
+/****** Object:  ForeignKey [FK_Communities_Municipalities]    Script Date: 02/19/2014 14:54:41 ******/
+ALTER TABLE [dbo].[Communities]  WITH CHECK ADD  CONSTRAINT [FK_Communities_Municipalities] FOREIGN KEY([MunicipalID])
+REFERENCES [dbo].[Municipalities] ([MunicipalID])
+GO
+ALTER TABLE [dbo].[Communities] CHECK CONSTRAINT [FK_Communities_Municipalities]
+GO
+/****** Object:  ForeignKey [FK_Organizations_Communities]    Script Date: 02/19/2014 14:54:41 ******/
+ALTER TABLE [dbo].[Organizations]  WITH CHECK ADD  CONSTRAINT [FK_Organizations_Communities] FOREIGN KEY([CommunityID])
+REFERENCES [dbo].[Communities] ([CommunityID])
+GO
+ALTER TABLE [dbo].[Organizations] CHECK CONSTRAINT [FK_Organizations_Communities]
+GO
+/****** Object:  ForeignKey [FK_ProfileClasses_Classes]    Script Date: 02/19/2014 14:54:41 ******/
+ALTER TABLE [dbo].[ProfileClasses]  WITH CHECK ADD  CONSTRAINT [FK_ProfileClasses_Classes] FOREIGN KEY([ClassID])
+REFERENCES [dbo].[BeneficiaryClasses] ([BeneficiaryClassID])
+GO
+ALTER TABLE [dbo].[ProfileClasses] CHECK CONSTRAINT [FK_ProfileClasses_Classes]
+GO
+/****** Object:  ForeignKey [FK_ProfileClasses_Profiles]    Script Date: 02/19/2014 14:54:41 ******/
+ALTER TABLE [dbo].[ProfileClasses]  WITH CHECK ADD  CONSTRAINT [FK_ProfileClasses_Profiles] FOREIGN KEY([ProfileID])
+REFERENCES [dbo].[Profiles] ([ProfileID])
+GO
+ALTER TABLE [dbo].[ProfileClasses] CHECK CONSTRAINT [FK_ProfileClasses_Profiles]
+GO
+/****** Object:  ForeignKey [FK_SessionAttachments_Sessions]    Script Date: 02/19/2014 14:54:41 ******/
+ALTER TABLE [dbo].[SessionAttachments]  WITH CHECK ADD  CONSTRAINT [FK_SessionAttachments_Sessions] FOREIGN KEY([SessionID])
+REFERENCES [dbo].[Sessions] ([SessionID])
+GO
+ALTER TABLE [dbo].[SessionAttachments] CHECK CONSTRAINT [FK_SessionAttachments_Sessions]
+GO
+/****** Object:  ForeignKey [FK_SessionParticipants_Beneficiarys]    Script Date: 02/19/2014 14:54:41 ******/
+ALTER TABLE [dbo].[SessionParticipants]  WITH CHECK ADD  CONSTRAINT [FK_SessionParticipants_Beneficiarys] FOREIGN KEY([BeneficiaryID])
+REFERENCES [dbo].[Beneficiaries] ([BeneficiaryID])
+GO
+ALTER TABLE [dbo].[SessionParticipants] CHECK CONSTRAINT [FK_SessionParticipants_Beneficiarys]
+GO
+/****** Object:  ForeignKey [FK_SessionParticipants_Sessions]    Script Date: 02/19/2014 14:54:41 ******/
+ALTER TABLE [dbo].[SessionParticipants]  WITH CHECK ADD  CONSTRAINT [FK_SessionParticipants_Sessions] FOREIGN KEY([SessionID])
+REFERENCES [dbo].[Sessions] ([SessionID])
+GO
+ALTER TABLE [dbo].[SessionParticipants] CHECK CONSTRAINT [FK_SessionParticipants_Sessions]
+GO
+/****** Object:  ForeignKey [FK_Sessions_BeneficiaryClasses]    Script Date: 02/19/2014 14:54:41 ******/
+ALTER TABLE [dbo].[Sessions]  WITH CHECK ADD  CONSTRAINT [FK_Sessions_BeneficiaryClasses] FOREIGN KEY([BeneficiaryClassID])
+REFERENCES [dbo].[BeneficiaryClasses] ([BeneficiaryClassID])
+GO
+ALTER TABLE [dbo].[Sessions] CHECK CONSTRAINT [FK_Sessions_BeneficiaryClasses]
+GO
+/****** Object:  ForeignKey [FK_Sessions_Projects]    Script Date: 02/19/2014 14:54:41 ******/
+ALTER TABLE [dbo].[Sessions]  WITH CHECK ADD  CONSTRAINT [FK_Sessions_Projects] FOREIGN KEY([ProjectID])
+REFERENCES [dbo].[Projects] ([ProjectID])
+GO
+ALTER TABLE [dbo].[Sessions] CHECK CONSTRAINT [FK_Sessions_Projects]
+GO
+/****** Object:  ForeignKey [FK_Sessions_SessionStatuses1]    Script Date: 02/19/2014 14:54:41 ******/
+ALTER TABLE [dbo].[Sessions]  WITH CHECK ADD  CONSTRAINT [FK_Sessions_SessionStatuses1] FOREIGN KEY([SessionStatusID])
+REFERENCES [dbo].[SessionStatuses] ([SessionStatusID])
+GO
+ALTER TABLE [dbo].[Sessions] CHECK CONSTRAINT [FK_Sessions_SessionStatuses1]
+GO
+/****** Object:  ForeignKey [FK_Sessions_Teachers]    Script Date: 02/19/2014 14:54:41 ******/
+ALTER TABLE [dbo].[Sessions]  WITH CHECK ADD  CONSTRAINT [FK_Sessions_Teachers] FOREIGN KEY([TeacherID])
+REFERENCES [dbo].[Teachers] ([TeacherID])
+GO
+ALTER TABLE [dbo].[Sessions] CHECK CONSTRAINT [FK_Sessions_Teachers]
+GO
+/****** Object:  ForeignKey [FK_TypeOfBeneficiaryProfile_Profiles]    Script Date: 02/19/2014 14:54:41 ******/
+ALTER TABLE [dbo].[TypeOfBeneficiaryProfile]  WITH CHECK ADD  CONSTRAINT [FK_TypeOfBeneficiaryProfile_Profiles] FOREIGN KEY([ProfileID])
+REFERENCES [dbo].[Profiles] ([ProfileID])
+GO
+ALTER TABLE [dbo].[TypeOfBeneficiaryProfile] CHECK CONSTRAINT [FK_TypeOfBeneficiaryProfile_Profiles]
+GO
+/****** Object:  ForeignKey [FK_TypeOfBeneficiaryProfile_TypeOfBeneficiaries]    Script Date: 02/19/2014 14:54:41 ******/
+ALTER TABLE [dbo].[TypeOfBeneficiaryProfile]  WITH CHECK ADD  CONSTRAINT [FK_TypeOfBeneficiaryProfile_TypeOfBeneficiaries] FOREIGN KEY([TypeOfBeneficiaryID])
+REFERENCES [dbo].[TypeOfBeneficiaries] ([TypeOfBeneficiaryID])
+GO
+ALTER TABLE [dbo].[TypeOfBeneficiaryProfile] CHECK CONSTRAINT [FK_TypeOfBeneficiaryProfile_TypeOfBeneficiaries]
+GO

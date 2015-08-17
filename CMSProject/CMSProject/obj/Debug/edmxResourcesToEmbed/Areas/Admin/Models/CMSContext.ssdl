@@ -1,0 +1,547 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CMSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="CMSModelStoreContainer">
+    <EntitySet Name="Beneficiaries" EntityType="CMSModel.Store.Beneficiaries" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BeneficiaryClasses" EntityType="CMSModel.Store.BeneficiaryClasses" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BeneficiaryOrganization" EntityType="CMSModel.Store.BeneficiaryOrganization" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BeneficiaryProfiles" EntityType="CMSModel.Store.BeneficiaryProfiles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BeneficiarySector" EntityType="CMSModel.Store.BeneficiarySector" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Communities" EntityType="CMSModel.Store.Communities" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Municipalities" EntityType="CMSModel.Store.Municipalities" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Organizations" EntityType="CMSModel.Store.Organizations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductiveSector" EntityType="CMSModel.Store.ProductiveSector" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProfileClasses" EntityType="CMSModel.Store.ProfileClasses" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Profiles" EntityType="CMSModel.Store.Profiles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Projects" EntityType="CMSModel.Store.Projects" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SessionAttachments" EntityType="CMSModel.Store.SessionAttachments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SessionParticipants" EntityType="CMSModel.Store.SessionParticipants" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sessions" EntityType="CMSModel.Store.Sessions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SessionStatuses" EntityType="CMSModel.Store.SessionStatuses" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="CMSModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Teachers" EntityType="CMSModel.Store.Teachers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TypeOfBeneficiaries" EntityType="CMSModel.Store.TypeOfBeneficiaries" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TypeOfBeneficiaryProfile" EntityType="CMSModel.Store.TypeOfBeneficiaryProfile" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Beneficiaries_Communities1" Association="CMSModel.Store.FK_Beneficiaries_Communities1">
+      <End Role="Communities" EntitySet="Communities" />
+      <End Role="Beneficiaries" EntitySet="Beneficiaries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Beneficiaries_TypeOfBeneficiaries" Association="CMSModel.Store.FK_Beneficiaries_TypeOfBeneficiaries">
+      <End Role="TypeOfBeneficiaries" EntitySet="TypeOfBeneficiaries" />
+      <End Role="Beneficiaries" EntitySet="Beneficiaries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BeneficiaryOrganization_Beneficiaries" Association="CMSModel.Store.FK_BeneficiaryOrganization_Beneficiaries">
+      <End Role="Beneficiaries" EntitySet="Beneficiaries" />
+      <End Role="BeneficiaryOrganization" EntitySet="BeneficiaryOrganization" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BeneficiaryOrganization_Organizations" Association="CMSModel.Store.FK_BeneficiaryOrganization_Organizations">
+      <End Role="Organizations" EntitySet="Organizations" />
+      <End Role="BeneficiaryOrganization" EntitySet="BeneficiaryOrganization" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BeneficiaryProfiles_Profiles" Association="CMSModel.Store.FK_BeneficiaryProfiles_Profiles">
+      <End Role="Profiles" EntitySet="Profiles" />
+      <End Role="BeneficiaryProfiles" EntitySet="BeneficiaryProfiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BeneficiaryProfiles_TypeOfBeneficiary" Association="CMSModel.Store.FK_BeneficiaryProfiles_TypeOfBeneficiary">
+      <End Role="TypeOfBeneficiaries" EntitySet="TypeOfBeneficiaries" />
+      <End Role="BeneficiaryProfiles" EntitySet="BeneficiaryProfiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BeneficiarySector_Beneficiaries" Association="CMSModel.Store.FK_BeneficiarySector_Beneficiaries">
+      <End Role="Beneficiaries" EntitySet="Beneficiaries" />
+      <End Role="BeneficiarySector" EntitySet="BeneficiarySector" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BeneficiarySector_ProductiveSector" Association="CMSModel.Store.FK_BeneficiarySector_ProductiveSector">
+      <End Role="ProductiveSector" EntitySet="ProductiveSector" />
+      <End Role="BeneficiarySector" EntitySet="BeneficiarySector" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Communities_Municipalities" Association="CMSModel.Store.FK_Communities_Municipalities">
+      <End Role="Municipalities" EntitySet="Municipalities" />
+      <End Role="Communities" EntitySet="Communities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Organizations_Communities" Association="CMSModel.Store.FK_Organizations_Communities">
+      <End Role="Communities" EntitySet="Communities" />
+      <End Role="Organizations" EntitySet="Organizations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProfileClasses_Classes" Association="CMSModel.Store.FK_ProfileClasses_Classes">
+      <End Role="BeneficiaryClasses" EntitySet="BeneficiaryClasses" />
+      <End Role="ProfileClasses" EntitySet="ProfileClasses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProfileClasses_Profiles" Association="CMSModel.Store.FK_ProfileClasses_Profiles">
+      <End Role="Profiles" EntitySet="Profiles" />
+      <End Role="ProfileClasses" EntitySet="ProfileClasses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SessionAttachments_Sessions" Association="CMSModel.Store.FK_SessionAttachments_Sessions">
+      <End Role="Sessions" EntitySet="Sessions" />
+      <End Role="SessionAttachments" EntitySet="SessionAttachments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SessionParticipants_Beneficiarys" Association="CMSModel.Store.FK_SessionParticipants_Beneficiarys">
+      <End Role="Beneficiaries" EntitySet="Beneficiaries" />
+      <End Role="SessionParticipants" EntitySet="SessionParticipants" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SessionParticipants_Sessions" Association="CMSModel.Store.FK_SessionParticipants_Sessions">
+      <End Role="Sessions" EntitySet="Sessions" />
+      <End Role="SessionParticipants" EntitySet="SessionParticipants" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sessions_BeneficiaryClasses" Association="CMSModel.Store.FK_Sessions_BeneficiaryClasses">
+      <End Role="BeneficiaryClasses" EntitySet="BeneficiaryClasses" />
+      <End Role="Sessions" EntitySet="Sessions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sessions_Projects" Association="CMSModel.Store.FK_Sessions_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="Sessions" EntitySet="Sessions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sessions_SessionStatuses1" Association="CMSModel.Store.FK_Sessions_SessionStatuses1">
+      <End Role="SessionStatuses" EntitySet="SessionStatuses" />
+      <End Role="Sessions" EntitySet="Sessions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sessions_Teachers" Association="CMSModel.Store.FK_Sessions_Teachers">
+      <End Role="Teachers" EntitySet="Teachers" />
+      <End Role="Sessions" EntitySet="Sessions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TypeOfBeneficiaryProfile_Profiles" Association="CMSModel.Store.FK_TypeOfBeneficiaryProfile_Profiles">
+      <End Role="Profiles" EntitySet="Profiles" />
+      <End Role="TypeOfBeneficiaryProfile" EntitySet="TypeOfBeneficiaryProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TypeOfBeneficiaryProfile_TypeOfBeneficiaries" Association="CMSModel.Store.FK_TypeOfBeneficiaryProfile_TypeOfBeneficiaries">
+      <End Role="TypeOfBeneficiaries" EntitySet="TypeOfBeneficiaries" />
+      <End Role="TypeOfBeneficiaryProfile" EntitySet="TypeOfBeneficiaryProfile" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Beneficiaries">
+    <Key>
+      <PropertyRef Name="BeneficiaryID" />
+    </Key>
+    <Property Name="BeneficiaryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdCardNumber" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Names" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LastNames" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Sex" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Address" Type="varchar(max)" Nullable="false" />
+    <Property Name="CommunityID" Type="int" Nullable="false" />
+    <Property Name="Phone" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Email" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="DateofRecord" Type="datetime" Nullable="false" />
+    <Property Name="ImagePath" Type="varchar" MaxLength="500" />
+    <Property Name="TypeOfBeneficiaryID" Type="int" />
+  </EntityType>
+  <EntityType Name="BeneficiaryClasses">
+    <Key>
+      <PropertyRef Name="BeneficiaryClassID" />
+    </Key>
+    <Property Name="BeneficiaryClassID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Description" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BeneficiaryOrganization">
+    <Key>
+      <PropertyRef Name="BeneficiaryID" />
+      <PropertyRef Name="OrganizationID" />
+    </Key>
+    <Property Name="BeneficiaryID" Type="int" Nullable="false" />
+    <Property Name="OrganizationID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BeneficiaryProfiles">
+    <Key>
+      <PropertyRef Name="TypeOfBenefID" />
+      <PropertyRef Name="ProfileID" />
+    </Key>
+    <Property Name="TypeOfBenefID" Type="int" Nullable="false" />
+    <Property Name="ProfileID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BeneficiarySector">
+    <Key>
+      <PropertyRef Name="BeneficiaryID" />
+      <PropertyRef Name="SectorID" />
+    </Key>
+    <Property Name="BeneficiaryID" Type="int" Nullable="false" />
+    <Property Name="SectorID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Communities">
+    <Key>
+      <PropertyRef Name="CommunityID" />
+    </Key>
+    <Property Name="CommunityID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MunicipalID" Type="int" />
+  </EntityType>
+  <EntityType Name="Municipalities">
+    <Key>
+      <PropertyRef Name="MunicipalID" />
+    </Key>
+    <Property Name="MunicipalID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Organizations">
+    <Key>
+      <PropertyRef Name="OrganizationID" />
+    </Key>
+    <Property Name="OrganizationID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CommunityID" Type="int" Nullable="false" />
+    <Property Name="YearOfFormalization" Type="varchar" Nullable="false" MaxLength="2000" />
+    <Property Name="YearofFoundation" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="NoOfEnrolledMembers" Type="int" />
+    <Property Name="NoOfActiveMembers" Type="int" />
+  </EntityType>
+  <EntityType Name="ProductiveSector">
+    <Key>
+      <PropertyRef Name="SectorId" />
+    </Key>
+    <Property Name="SectorId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ProfileClasses">
+    <Key>
+      <PropertyRef Name="ProfileID" />
+      <PropertyRef Name="ClassID" />
+    </Key>
+    <Property Name="ProfileID" Type="int" Nullable="false" />
+    <Property Name="ClassID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Profiles">
+    <Key>
+      <PropertyRef Name="ProfileID" />
+    </Key>
+    <Property Name="ProfileID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Description" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Projects">
+    <Key>
+      <PropertyRef Name="ProjectID" />
+    </Key>
+    <Property Name="ProjectID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SessionAttachments">
+    <Key>
+      <PropertyRef Name="SessionAttachmentID" />
+    </Key>
+    <Property Name="SessionAttachmentID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SessionID" Type="int" Nullable="false" />
+    <Property Name="AttachedDocumentURL" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="Description" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SessionParticipants">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SessionID" Type="int" Nullable="false" />
+    <Property Name="BeneficiaryID" Type="int" Nullable="false" />
+    <Property Name="Attended" Type="bit" Nullable="false" />
+    <Property Name="Completed" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sessions">
+    <Key>
+      <PropertyRef Name="SessionID" />
+    </Key>
+    <Property Name="SessionID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BeneficiaryClassID" Type="int" Nullable="false" />
+    <Property Name="InitialDate" Type="datetime" Nullable="false" />
+    <Property Name="EndDate" Type="datetime" Nullable="false" />
+    <Property Name="Venue" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Place" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="TeacherID" Type="int" Nullable="false" />
+    <Property Name="ProjectID" Type="int" Nullable="false" />
+    <Property Name="SessionStatusID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SessionStatuses">
+    <Key>
+      <PropertyRef Name="SessionStatusID" />
+    </Key>
+    <Property Name="SessionStatusID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Description" Type="varchar(max)" Nullable="false" />
+    <Property Name="Completed" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Teachers">
+    <Key>
+      <PropertyRef Name="TeacherID" />
+    </Key>
+    <Property Name="TeacherID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Photo" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="IdentificationCardNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="500" />
+    <Property Name="Telephone" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TypeOfBeneficiaries">
+    <Key>
+      <PropertyRef Name="TypeOfBeneficiaryID" />
+    </Key>
+    <Property Name="TypeOfBeneficiaryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TypeOfBeneficiaryProfile">
+    <Key>
+      <PropertyRef Name="TypeOfBeneficiaryID" />
+      <PropertyRef Name="ProfileID" />
+    </Key>
+    <Property Name="TypeOfBeneficiaryID" Type="int" Nullable="false" />
+    <Property Name="ProfileID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Beneficiaries_Communities1">
+    <End Role="Communities" Type="CMSModel.Store.Communities" Multiplicity="1" />
+    <End Role="Beneficiaries" Type="CMSModel.Store.Beneficiaries" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Communities">
+        <PropertyRef Name="CommunityID" />
+      </Principal>
+      <Dependent Role="Beneficiaries">
+        <PropertyRef Name="CommunityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Beneficiaries_TypeOfBeneficiaries">
+    <End Role="TypeOfBeneficiaries" Type="CMSModel.Store.TypeOfBeneficiaries" Multiplicity="0..1" />
+    <End Role="Beneficiaries" Type="CMSModel.Store.Beneficiaries" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeOfBeneficiaries">
+        <PropertyRef Name="TypeOfBeneficiaryID" />
+      </Principal>
+      <Dependent Role="Beneficiaries">
+        <PropertyRef Name="TypeOfBeneficiaryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BeneficiaryOrganization_Beneficiaries">
+    <End Role="Beneficiaries" Type="CMSModel.Store.Beneficiaries" Multiplicity="1" />
+    <End Role="BeneficiaryOrganization" Type="CMSModel.Store.BeneficiaryOrganization" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Beneficiaries">
+        <PropertyRef Name="BeneficiaryID" />
+      </Principal>
+      <Dependent Role="BeneficiaryOrganization">
+        <PropertyRef Name="BeneficiaryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BeneficiaryOrganization_Organizations">
+    <End Role="Organizations" Type="CMSModel.Store.Organizations" Multiplicity="1" />
+    <End Role="BeneficiaryOrganization" Type="CMSModel.Store.BeneficiaryOrganization" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Organizations">
+        <PropertyRef Name="OrganizationID" />
+      </Principal>
+      <Dependent Role="BeneficiaryOrganization">
+        <PropertyRef Name="OrganizationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BeneficiaryProfiles_Profiles">
+    <End Role="Profiles" Type="CMSModel.Store.Profiles" Multiplicity="1" />
+    <End Role="BeneficiaryProfiles" Type="CMSModel.Store.BeneficiaryProfiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profiles">
+        <PropertyRef Name="ProfileID" />
+      </Principal>
+      <Dependent Role="BeneficiaryProfiles">
+        <PropertyRef Name="ProfileID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BeneficiaryProfiles_TypeOfBeneficiary">
+    <End Role="TypeOfBeneficiaries" Type="CMSModel.Store.TypeOfBeneficiaries" Multiplicity="1" />
+    <End Role="BeneficiaryProfiles" Type="CMSModel.Store.BeneficiaryProfiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeOfBeneficiaries">
+        <PropertyRef Name="TypeOfBeneficiaryID" />
+      </Principal>
+      <Dependent Role="BeneficiaryProfiles">
+        <PropertyRef Name="TypeOfBenefID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BeneficiarySector_Beneficiaries">
+    <End Role="Beneficiaries" Type="CMSModel.Store.Beneficiaries" Multiplicity="1" />
+    <End Role="BeneficiarySector" Type="CMSModel.Store.BeneficiarySector" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Beneficiaries">
+        <PropertyRef Name="BeneficiaryID" />
+      </Principal>
+      <Dependent Role="BeneficiarySector">
+        <PropertyRef Name="BeneficiaryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BeneficiarySector_ProductiveSector">
+    <End Role="ProductiveSector" Type="CMSModel.Store.ProductiveSector" Multiplicity="1" />
+    <End Role="BeneficiarySector" Type="CMSModel.Store.BeneficiarySector" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductiveSector">
+        <PropertyRef Name="SectorId" />
+      </Principal>
+      <Dependent Role="BeneficiarySector">
+        <PropertyRef Name="SectorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Communities_Municipalities">
+    <End Role="Municipalities" Type="CMSModel.Store.Municipalities" Multiplicity="0..1" />
+    <End Role="Communities" Type="CMSModel.Store.Communities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Municipalities">
+        <PropertyRef Name="MunicipalID" />
+      </Principal>
+      <Dependent Role="Communities">
+        <PropertyRef Name="MunicipalID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Organizations_Communities">
+    <End Role="Communities" Type="CMSModel.Store.Communities" Multiplicity="1" />
+    <End Role="Organizations" Type="CMSModel.Store.Organizations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Communities">
+        <PropertyRef Name="CommunityID" />
+      </Principal>
+      <Dependent Role="Organizations">
+        <PropertyRef Name="CommunityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProfileClasses_Classes">
+    <End Role="BeneficiaryClasses" Type="CMSModel.Store.BeneficiaryClasses" Multiplicity="1" />
+    <End Role="ProfileClasses" Type="CMSModel.Store.ProfileClasses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BeneficiaryClasses">
+        <PropertyRef Name="BeneficiaryClassID" />
+      </Principal>
+      <Dependent Role="ProfileClasses">
+        <PropertyRef Name="ClassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProfileClasses_Profiles">
+    <End Role="Profiles" Type="CMSModel.Store.Profiles" Multiplicity="1" />
+    <End Role="ProfileClasses" Type="CMSModel.Store.ProfileClasses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profiles">
+        <PropertyRef Name="ProfileID" />
+      </Principal>
+      <Dependent Role="ProfileClasses">
+        <PropertyRef Name="ProfileID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SessionAttachments_Sessions">
+    <End Role="Sessions" Type="CMSModel.Store.Sessions" Multiplicity="1" />
+    <End Role="SessionAttachments" Type="CMSModel.Store.SessionAttachments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sessions">
+        <PropertyRef Name="SessionID" />
+      </Principal>
+      <Dependent Role="SessionAttachments">
+        <PropertyRef Name="SessionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SessionParticipants_Beneficiarys">
+    <End Role="Beneficiaries" Type="CMSModel.Store.Beneficiaries" Multiplicity="1" />
+    <End Role="SessionParticipants" Type="CMSModel.Store.SessionParticipants" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Beneficiaries">
+        <PropertyRef Name="BeneficiaryID" />
+      </Principal>
+      <Dependent Role="SessionParticipants">
+        <PropertyRef Name="BeneficiaryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SessionParticipants_Sessions">
+    <End Role="Sessions" Type="CMSModel.Store.Sessions" Multiplicity="1" />
+    <End Role="SessionParticipants" Type="CMSModel.Store.SessionParticipants" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sessions">
+        <PropertyRef Name="SessionID" />
+      </Principal>
+      <Dependent Role="SessionParticipants">
+        <PropertyRef Name="SessionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sessions_BeneficiaryClasses">
+    <End Role="BeneficiaryClasses" Type="CMSModel.Store.BeneficiaryClasses" Multiplicity="1" />
+    <End Role="Sessions" Type="CMSModel.Store.Sessions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BeneficiaryClasses">
+        <PropertyRef Name="BeneficiaryClassID" />
+      </Principal>
+      <Dependent Role="Sessions">
+        <PropertyRef Name="BeneficiaryClassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sessions_Projects">
+    <End Role="Projects" Type="CMSModel.Store.Projects" Multiplicity="1" />
+    <End Role="Sessions" Type="CMSModel.Store.Sessions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ProjectID" />
+      </Principal>
+      <Dependent Role="Sessions">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sessions_SessionStatuses1">
+    <End Role="SessionStatuses" Type="CMSModel.Store.SessionStatuses" Multiplicity="1" />
+    <End Role="Sessions" Type="CMSModel.Store.Sessions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SessionStatuses">
+        <PropertyRef Name="SessionStatusID" />
+      </Principal>
+      <Dependent Role="Sessions">
+        <PropertyRef Name="SessionStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sessions_Teachers">
+    <End Role="Teachers" Type="CMSModel.Store.Teachers" Multiplicity="1" />
+    <End Role="Sessions" Type="CMSModel.Store.Sessions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teachers">
+        <PropertyRef Name="TeacherID" />
+      </Principal>
+      <Dependent Role="Sessions">
+        <PropertyRef Name="TeacherID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TypeOfBeneficiaryProfile_Profiles">
+    <End Role="Profiles" Type="CMSModel.Store.Profiles" Multiplicity="1" />
+    <End Role="TypeOfBeneficiaryProfile" Type="CMSModel.Store.TypeOfBeneficiaryProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profiles">
+        <PropertyRef Name="ProfileID" />
+      </Principal>
+      <Dependent Role="TypeOfBeneficiaryProfile">
+        <PropertyRef Name="ProfileID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TypeOfBeneficiaryProfile_TypeOfBeneficiaries">
+    <End Role="TypeOfBeneficiaries" Type="CMSModel.Store.TypeOfBeneficiaries" Multiplicity="1" />
+    <End Role="TypeOfBeneficiaryProfile" Type="CMSModel.Store.TypeOfBeneficiaryProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeOfBeneficiaries">
+        <PropertyRef Name="TypeOfBeneficiaryID" />
+      </Principal>
+      <Dependent Role="TypeOfBeneficiaryProfile">
+        <PropertyRef Name="TypeOfBeneficiaryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

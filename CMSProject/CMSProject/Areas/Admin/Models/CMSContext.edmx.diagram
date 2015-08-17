@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e72bd8763efd4d07b0f6dda82df0d200" Name="Diagram1">
+        <EntityTypeShape EntityType="CMSModel.Beneficiary" Width="1.5" PointX="7.5" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.BeneficiaryClass" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.Community" Width="1.5" PointX="5.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.Municipality" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.Organization" Width="1.5" PointX="12.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.ProductiveSector" Width="1.5" PointX="9.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.Profile" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.Project" Width="1.5" PointX="0.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.SessionAttachment" Width="1.5" PointX="5.25" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.SessionParticipant" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.Session" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.SessionStatus" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.TypeOfBeneficiary" Width="1.5" PointX="5.25" PointY="5.875" IsExpanded="true" />
+        <AssociationConnector Association="CMSModel.FK_Beneficiaries_Communities1" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_Beneficiaries_TypeOfBeneficiaries" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_SessionParticipants_Beneficiarys" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_Sessions_BeneficiaryClasses" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_Communities_Municipalities" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_Organizations_Communities" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_Sessions_Projects" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_SessionAttachments_Sessions" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_SessionParticipants_Sessions" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_Sessions_SessionStatuses1" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.BeneficiaryOrganization" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.BeneficiaryProfiles" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.BeneficiarySector" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.ProfileClasses" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.TypeOfBeneficiaryProfile" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="CMSModel.sysdiagram" Width="1.5" PointX="10.784363859698345" PointY="7.3041154329218507" />
+        <EntityTypeShape EntityType="CMSModel.Teacher" Width="1.5" PointX="8.2791388743925562" PointY="25.832103920090994" />
+        <AssociationConnector Association="CMSModel.FK_Sessions_Teachers" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

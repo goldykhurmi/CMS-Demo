@@ -1,0 +1,44 @@
+﻿@model CMSProject.Areas.Admin.Models.ProductiveSector
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<!--Start Section Layout-->
+<div class="box-header well" data-original-title>
+    <h2><i class="icon-user"></i>@ViewBag.CurrentPage</h2>
+    @*<div class="box-icon">
+							<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+							<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+						</div>*@
+</div>
+<div class="box-content">
+
+    <section>
+        <!----------------------------->
+
+
+        <h3>Are you sure you want to delete this?</h3>
+        <fieldset>
+            <legend>ProductiveSector</legend>
+
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.Name)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.Name)
+            </div>
+        </fieldset>
+        @using (Html.BeginForm())
+        {
+            <p>
+                <input type="submit" value="Delete" />
+                |
+        @Html.ActionLink("Back to List", "Index")
+            </p>
+        }
+        <!--Close Section Layout-->
+    </section>
+</div>
+<!---->

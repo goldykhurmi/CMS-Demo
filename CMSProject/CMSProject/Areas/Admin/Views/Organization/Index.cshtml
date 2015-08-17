@@ -1,0 +1,92 @@
+﻿@model IEnumerable<CMSProject.Areas.Admin.Models.Organization>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!--Start Section Layout-->
+<div class="box-header well" data-original-title>
+    <h2><i class="icon-user"></i>@ViewBag.CurrentPage</h2>
+    @*<div class="box-icon">
+							<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+							<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+						</div>*@
+</div>
+<div class="box-content">
+
+    <section>
+        <!----------------------------->
+
+
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table class="table table-striped table-bordered bootstrap-datatable datatable">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Community.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.YearOfFormalization)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.YearofFoundation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NoOfEnrolledMembers)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NoOfActiveMembers)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Community.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.YearOfFormalization)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.YearofFoundation)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NoOfEnrolledMembers)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NoOfActiveMembers)
+                    </td>
+                    <td>
+                         <a class="btn btn-success" href="@Url.Content("~/Admin/Organization/Details/" + item.OrganizationID)">
+                            <i class="icon-zoom-in icon-white"></i>
+                            View                                            
+									</a>
+                        <a class="btn btn-info" href="@Url.Content("~/Admin/Organization/Edit/" + item.OrganizationID)">
+                            <i class="icon-edit icon-white"></i>
+                            Edit                                            
+									</a>
+                        <a class="btn btn-danger" href="@Url.Content("~/Admin/Organization/Delete/" + item.OrganizationID)">
+                            <i class="icon-trash icon-white"></i>Delete
+                            </a>
+                        @*@Html.ActionLink("Edit", "Edit", new { id = item.OrganizationID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.OrganizationID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.OrganizationID })*@
+                    </td>
+                </tr>
+            }
+
+        </table>
+        <!--Close Section Layout-->
+    </section>
+</div>
+<!---->

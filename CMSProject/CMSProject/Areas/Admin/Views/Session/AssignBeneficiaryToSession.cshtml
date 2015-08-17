@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "AssignBeneficiaryToSession";
+}
+
+<!--Start Section Layout-->
+<div class="box-header well" data-original-title>
+    <h2><i class="icon-user"></i>@ViewBag.CurrentPage</h2>
+    @*<div class="box-icon">
+							<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+							<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+						</div>*@
+</div>
+<div class="box-content">
+
+    <section>
+        <!----------------------------->
+
+        @using (Html.BeginForm("AssignBeneficiaryToSession", "Session", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+
+            <fieldset>
+                <legend>SessionParticipants</legend>
+
+                <div class="editor-label">
+                    Beneficiary
+                </div>
+                <div class="editor-field">
+                    @Html.DropDownList("Beneficiary", (IEnumerable<SelectListItem>)ViewBag.Beneficiary, string.Empty, new { @data_val = "true", @data_val_required = "Beneficiary is required." })
+                    <span class="field-validation-valid" data-valmsg-for="Class" data-valmsg-replace="true"></span>
+                </div>
+
+                <div class="editor-label">
+                    Session
+                </div>
+                <div class="editor-field">
+                    @Html.DropDownList("Session", (IEnumerable<SelectListItem>)ViewBag.Session, string.Empty, new { @data_val = "true", @data_val_required = "Session is required." })
+                    <span class="field-validation-valid" data-valmsg-for="Profile" data-valmsg-replace="true"></span>
+                </div>
+                <div class="editor-label">
+                    Attended
+                </div>
+                <div class="editor-label">
+                    @*@Html.LabelFor(model => model.Completed)*@
+                </div>
+                <div class="editor-field">
+                    @Html.CheckBox("Attended")
+                    @* @Html.ValidationMessageFor(model => model.Completed)*@
+                </div>
+                <div class="editor-label">
+                    Completed
+                </div>
+                <div class="editor-label">
+                    @* @Html.LabelFor(model => model.Completed)*@
+                </div>
+                <div class="editor-field">
+                    @Html.CheckBox("Completed")
+                    @* @Html.ValidationMessageFor(model => model.Completed)*@
+                </div>
+                <p>
+                    <input type="submit" value="Create" />
+                </p>
+            </fieldset>
+        }
+
+
+        @section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
+            }
+        <!--Close Section Layout-->
+    </section>
+</div>
+<!---->

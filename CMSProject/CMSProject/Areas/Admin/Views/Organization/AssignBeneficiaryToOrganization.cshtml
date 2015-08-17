@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "AssignBeneficiaryToOrganization";
+}
+
+<!--Start Section Layout-->
+<div class="box-header well" data-original-title>
+    <h2><i class="icon-user"></i>@ViewBag.CurrentPage</h2>
+    @*<div class="box-icon">
+							<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+							<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+						</div>*@
+</div>
+<div class="box-content">
+
+    <section>
+        <!----------------------------->
+
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+
+            <fieldset>
+                <legend>Beneficiary Organizzzation</legend>
+
+                <div class="editor-label">
+                    Beneficiary
+                </div>
+                <div class="editor-field">
+                    @Html.DropDownList("Beneficiary", (IEnumerable<SelectListItem>)ViewBag.Beneficiary, string.Empty, new { @data_val = "true", @data_val_required = "Beneficiary is required." })
+                    <span class="field-validation-valid" data-valmsg-for="Class" data-valmsg-replace="true"></span>
+                </div>
+
+                <div class="editor-label">
+                    Organization
+                </div>
+                <div class="editor-field">
+                    @Html.DropDownList("Organization", (IEnumerable<SelectListItem>)ViewBag.Organization, string.Empty, new { @data_val = "true", @data_val_required = "Organization is required." })
+                    <span class="field-validation-valid" data-valmsg-for="Profile" data-valmsg-replace="true"></span>
+                </div>
+
+                <p>
+                    <input type="submit" value="Create" />
+                </p>
+            </fieldset>
+        }
+
+
+        @section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
+            }
+        <!--Close Section Layout-->
+    </section>
+</div>
+<!---->

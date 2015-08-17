@@ -1,0 +1,218 @@
+﻿@model CMSProject.Models.LoginModel
+@{
+    Layout = "";
+}
+@{
+    ViewBag.Title = "Log in";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+       	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<!-- The styles -->
+
+	<style type="text/css">
+	  body {
+		padding-bottom: 40px;
+	  }
+	  .sidebar-nav {
+		padding: 9px 0;
+	  }
+	</style>
+
+        <link href="~/Design/charisma-master/charisma-master/css/bootstrap-cerulean.css" rel="stylesheet" />
+        
+         <link href="~/Design/charisma-master/charisma-master/css/bootstrap-responsive.css" rel="stylesheet" />
+        <link href="~/Design/charisma-master/charisma-master/css/charisma-app.css" rel="stylesheet" />
+        <link href="~/Design/charisma-master/charisma-master/css/jquery-ui-1.8.21.custom.css" rel="stylesheet" />
+       <link href="~/Design/charisma-master/charisma-master/css/fullcalendar.css" rel="stylesheet" />
+        <link href="~/Design/charisma-master/charisma-master/css/fullcalendar.print.css" rel="stylesheet" />
+        <link href="~/Design/charisma-master/charisma-master/css/chosen.css" rel="stylesheet" />
+        <link href="~/Design/charisma-master/charisma-master/css/uniform.default.css" rel="stylesheet" />
+        <link href="~/Design/charisma-master/charisma-master/css/colorbox.css" rel="stylesheet" /> 
+        <link href="~/Design/charisma-master/charisma-master/css/jquery.cleditor.css" rel="stylesheet" /> 
+        <link href="~/Design/charisma-master/charisma-master/css/jquery.noty.css" rel="stylesheet" />
+        <link href="~/Design/charisma-master/charisma-master/css/noty_theme_default.css" rel="stylesheet" /> 
+        <link href="~/Design/charisma-master/charisma-master/css/elfinder.min.css" rel="stylesheet" />
+        <link href="~/Design/charisma-master/charisma-master/css/elfinder.theme.css" rel="stylesheet" />
+        <link href="~/Design/charisma-master/charisma-master/css/jquery.iphone.toggle.css" rel="stylesheet" /> 
+        <link href="~/Design/charisma-master/charisma-master/css/opa-icons.css" rel="stylesheet" />
+         <link href="~/Design/charisma-master/charisma-master/css/uploadify.css" rel="stylesheet" />
+      
+    </head>
+<body>
+<div class="container-fluid">
+		<div class="row-fluid">
+		
+			<div class="row-fluid">
+				<div class="span12 center login-header">
+					<h2>Welcome to CMS</h2>
+				</div><!--/span-->
+			</div><!--/row-->
+			
+			<div class="row-fluid">
+				<div class="well span5 center login-box">
+					<div class="alert alert-info">
+						Please login with your Username and Password.
+					</div>
+                    @using (Html.BeginForm(new {@class="form-horizontal", ReturnUrl = ViewBag.ReturnUrl })) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+					
+						<fieldset>
+							<div class="input-prepend" title="Username" data-rel="tooltip">
+								<span class="add-on"><i class="icon-user"></i></span><input autofocus class="input-large span10" name="UserName" id="UserName" type="text" value="admin" />
+                                 @Html.ValidationMessageFor(m => m.UserName)
+							</div>
+							<div class="clearfix"></div>
+
+							<div class="input-prepend" title="Password" data-rel="tooltip">
+								<span class="add-on"><i class="icon-lock"></i></span><input class="input-large span10" name="Password" id="Password" type="password" value="admin123456" />
+                                 @Html.ValidationMessageFor(m => m.Password)
+							</div>
+							<div class="clearfix"></div>
+
+							<div class="input-prepend">
+							<label class="remember" for="remember"><input type="checkbox" name="RememberMe" id="remember" />Remember me</label>
+							</div>
+							<div class="clearfix"></div>
+
+							<p class="center span5">
+							<button type="submit" class="btn btn-primary">Login</button>
+							</p>
+						</fieldset>
+					}
+				</div><!--/span-->
+			</div><!--/row-->
+				</div><!--/fluid-row-->
+		
+	</div><!--/.fluid-container-->
+
+<!-- external javascript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+
+	<!-- jQuery -->
+	<script src="~/Design/charisma-master/charisma-master/js/jquery-1.7.2.min.js"></script>
+	<!-- jQuery UI -->
+	<script src="~/Design/charisma-master/charisma-master/js/jquery-ui-1.8.21.custom.min.js"></script>
+	<!-- transition / effect library -->
+	<script src="~/Design/charisma-master/charisma-master/js/bootstrap-transition.js"></script>
+	<!-- alert enhancer library -->
+	<script src="~/Design/charisma-master/charisma-master/js/bootstrap-alert.js"></script>
+	<!-- modal / dialog library -->
+	<script src="~/Design/charisma-master/charisma-master/js/bootstrap-modal.js"></script>
+	<!-- custom dropdown library -->
+	<script src="~/Design/charisma-master/charisma-master/js/bootstrap-dropdown.js"></script>
+	<!-- scrolspy library -->
+	<script src="~/Design/charisma-master/charisma-master/js/bootstrap-scrollspy.js"></script>
+	<!-- library for creating tabs -->
+	<script src="~/Design/charisma-master/charisma-master/js/bootstrap-tab.js"></script>
+	<!-- library for advanced tooltip -->
+	<script src="~/Design/charisma-master/charisma-master/js/bootstrap-tooltip.js"></script>
+	<!-- popover effect library -->
+	<script src="~/Design/charisma-master/charisma-master/js/bootstrap-popover.js"></script>
+	<!-- button enhancer library -->
+	<script src="~/Design/charisma-master/charisma-master/js/bootstrap-button.js"></script>
+	<!-- accordion library (optional, not used in demo) -->
+	<script src="~/Design/charisma-master/charisma-master/js/bootstrap-collapse.js"></script>
+	<!-- carousel slideshow library (optional, not used in demo) -->
+	<script src="~/Design/charisma-master/charisma-master/js/bootstrap-carousel.js"></script>
+	<!-- autocomplete library -->
+	<script src="~/Design/charisma-master/charisma-master/js/bootstrap-typeahead.js"></script>
+	<!-- tour library -->
+	<script src="~/Design/charisma-master/charisma-master/js/bootstrap-tour.js"></script>
+	<!-- library for cookie management -->
+	<script src="~/Design/charisma-master/charisma-master/js/jquery.cookie.js"></script>
+	<!-- calander plugin -->
+	<script src='~/Design/charisma-master/charisma-master/js/fullcalendar.min.js'></script>
+	<!-- data table plugin -->
+	<script src='~/Design/charisma-master/charisma-master/js/jquery.dataTables.min.js'></script>
+
+	<!-- chart libraries start -->
+	<script src="~/Design/charisma-master/charisma-master/js/excanvas.js"></script>
+	<script src="~/Design/charisma-master/charisma-master/js/jquery.flot.min.js"></script>
+	<script src="~/Design/charisma-master/charisma-master/js/jquery.flot.pie.min.js"></script>
+	<script src="~/Design/charisma-master/charisma-master/js/jquery.flot.stack.js"></script>
+	<script src="~/Design/charisma-master/charisma-master/js/jquery.flot.resize.min.js"></script>
+	<!-- chart libraries end -->
+
+	<!-- select or dropdown enhancer -->
+	<script src="~/Design/charisma-master/charisma-master/js/jquery.chosen.min.js"></script>
+	<!-- checkbox, radio, and file input styler -->
+	<script src="~/Design/charisma-master/charisma-master/js/jquery.uniform.min.js"></script>
+	<!-- plugin for gallery image view -->
+	<script src="~/Design/charisma-master/charisma-master/js/jquery.colorbox.min.js"></script>
+	<!-- rich text editor library -->
+	<script src="~/Design/charisma-master/charisma-master/js/jquery.cleditor.min.js"></script>
+	<!-- notification plugin -->
+	<script src="~/Design/charisma-master/charisma-master/js/jquery.noty.js"></script>
+	<!-- file manager library -->
+	<script src="~/Design/charisma-master/charisma-master/js/jquery.elfinder.min.js"></script>
+	<!-- star rating plugin -->
+	<script src="~/Design/charisma-master/charisma-master/js/jquery.raty.min.js"></script>
+	<!-- for iOS style toggle switch -->
+	<script src="~/Design/charisma-master/charisma-master/js/jquery.iphone.toggle.js"></script>
+	<!-- autogrowing textarea plugin -->
+	<script src="~/Design/charisma-master/charisma-master/js/jquery.autogrow-textarea.js"></script>
+	<!-- multiple file upload plugin -->
+	<script src="~/Design/charisma-master/charisma-master/js/jquery.uploadify-3.1.min.js"></script>
+	<!-- history.js for cross-browser state change on ajax -->
+	<script src="~/Design/charisma-master/charisma-master/js/jquery.history.js"></script>
+	<!-- application script for Charisma demo -->
+	<script src="~/Design/charisma-master/charisma-master/js/charisma.js"></script>
+			
+</body>
+</html>
+
+
+
+@*<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+</hgroup>
+
+<section id="loginForm">
+<h2>Use a local account to log in.</h2>
+@using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl })) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Log in Form</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.UserName)
+                @Html.TextBoxFor(m => m.UserName)
+                @Html.ValidationMessageFor(m => m.UserName)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password)
+                @Html.ValidationMessageFor(m => m.Password)
+            </li>
+            <li>
+                @Html.CheckBoxFor(m => m.RememberMe)
+                @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
+            </li>
+        </ol>
+        <input type="submit" value="Log in" />
+    </fieldset>
+    <p>
+        @Html.ActionLink("Register", "Register") if you don't have an account.
+    </p>
+}
+</section>
+
+<section class="social" id="socialLoginForm">
+    <h2>Use another service to log in.</h2>
+    @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
+</section>*@
+

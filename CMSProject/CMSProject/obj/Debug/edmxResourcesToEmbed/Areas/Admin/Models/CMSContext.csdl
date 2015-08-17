@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CMSModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="CMSEntities2" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Beneficiaries" EntityType="CMSModel.Beneficiary" />
+    <EntitySet Name="BeneficiaryClasses" EntityType="CMSModel.BeneficiaryClass" />
+    <EntitySet Name="Communities" EntityType="CMSModel.Community" />
+    <EntitySet Name="Municipalities" EntityType="CMSModel.Municipality" />
+    <EntitySet Name="Organizations" EntityType="CMSModel.Organization" />
+    <EntitySet Name="ProductiveSectors" EntityType="CMSModel.ProductiveSector" />
+    <EntitySet Name="Profiles" EntityType="CMSModel.Profile" />
+    <EntitySet Name="Projects" EntityType="CMSModel.Project" />
+    <EntitySet Name="SessionAttachments" EntityType="CMSModel.SessionAttachment" />
+    <EntitySet Name="SessionParticipants" EntityType="CMSModel.SessionParticipant" />
+    <EntitySet Name="Sessions" EntityType="CMSModel.Session" />
+    <EntitySet Name="SessionStatuses" EntityType="CMSModel.SessionStatus" />
+    <EntitySet Name="TypeOfBeneficiaries" EntityType="CMSModel.TypeOfBeneficiary" />
+    <AssociationSet Name="FK_Beneficiaries_Communities1" Association="CMSModel.FK_Beneficiaries_Communities1">
+      <End Role="Communities" EntitySet="Communities" />
+      <End Role="Beneficiaries" EntitySet="Beneficiaries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Beneficiaries_TypeOfBeneficiaries" Association="CMSModel.FK_Beneficiaries_TypeOfBeneficiaries">
+      <End Role="TypeOfBeneficiaries" EntitySet="TypeOfBeneficiaries" />
+      <End Role="Beneficiaries" EntitySet="Beneficiaries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SessionParticipants_Beneficiarys" Association="CMSModel.FK_SessionParticipants_Beneficiarys">
+      <End Role="Beneficiaries" EntitySet="Beneficiaries" />
+      <End Role="SessionParticipants" EntitySet="SessionParticipants" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sessions_BeneficiaryClasses" Association="CMSModel.FK_Sessions_BeneficiaryClasses">
+      <End Role="BeneficiaryClasses" EntitySet="BeneficiaryClasses" />
+      <End Role="Sessions" EntitySet="Sessions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Communities_Municipalities" Association="CMSModel.FK_Communities_Municipalities">
+      <End Role="Municipalities" EntitySet="Municipalities" />
+      <End Role="Communities" EntitySet="Communities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Organizations_Communities" Association="CMSModel.FK_Organizations_Communities">
+      <End Role="Communities" EntitySet="Communities" />
+      <End Role="Organizations" EntitySet="Organizations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sessions_Projects" Association="CMSModel.FK_Sessions_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="Sessions" EntitySet="Sessions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SessionAttachments_Sessions" Association="CMSModel.FK_SessionAttachments_Sessions">
+      <End Role="Sessions" EntitySet="Sessions" />
+      <End Role="SessionAttachments" EntitySet="SessionAttachments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SessionParticipants_Sessions" Association="CMSModel.FK_SessionParticipants_Sessions">
+      <End Role="Sessions" EntitySet="Sessions" />
+      <End Role="SessionParticipants" EntitySet="SessionParticipants" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sessions_SessionStatuses1" Association="CMSModel.FK_Sessions_SessionStatuses1">
+      <End Role="SessionStatuses" EntitySet="SessionStatuses" />
+      <End Role="Sessions" EntitySet="Sessions" />
+    </AssociationSet>
+    <AssociationSet Name="BeneficiaryOrganization" Association="CMSModel.BeneficiaryOrganization">
+      <End Role="Beneficiaries" EntitySet="Beneficiaries" />
+      <End Role="Organizations" EntitySet="Organizations" />
+    </AssociationSet>
+    <AssociationSet Name="BeneficiaryProfiles" Association="CMSModel.BeneficiaryProfiles">
+      <End Role="Profiles" EntitySet="Profiles" />
+      <End Role="TypeOfBeneficiaries" EntitySet="TypeOfBeneficiaries" />
+    </AssociationSet>
+    <AssociationSet Name="BeneficiarySector" Association="CMSModel.BeneficiarySector">
+      <End Role="Beneficiaries" EntitySet="Beneficiaries" />
+      <End Role="ProductiveSector" EntitySet="ProductiveSectors" />
+    </AssociationSet>
+    <AssociationSet Name="ProfileClasses" Association="CMSModel.ProfileClasses">
+      <End Role="BeneficiaryClasses" EntitySet="BeneficiaryClasses" />
+      <End Role="Profiles" EntitySet="Profiles" />
+    </AssociationSet>
+    <AssociationSet Name="TypeOfBeneficiaryProfile" Association="CMSModel.TypeOfBeneficiaryProfile">
+      <End Role="Profiles" EntitySet="Profiles" />
+      <End Role="TypeOfBeneficiaries" EntitySet="TypeOfBeneficiaries" />
+    </AssociationSet>
+    <EntitySet Name="sysdiagrams" EntityType="CMSModel.sysdiagram" />
+    <EntitySet Name="Teachers" EntityType="CMSModel.Teacher" />
+    <AssociationSet Name="FK_Sessions_Teachers" Association="CMSModel.FK_Sessions_Teachers">
+      <End Role="Teacher" EntitySet="Teachers" />
+      <End Role="Session" EntitySet="Sessions" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Beneficiary">
+    <Key>
+      <PropertyRef Name="BeneficiaryID" />
+    </Key>
+    <Property Name="BeneficiaryID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="IdCardNumber" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Names" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LastNames" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Sex" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="CommunityID" Type="Int32" Nullable="false" />
+    <Property Name="Phone" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DateofRecord" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ImagePath" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="TypeOfBeneficiaryID" Type="Int32" />
+    <NavigationProperty Name="Community" Relationship="CMSModel.FK_Beneficiaries_Communities1" FromRole="Beneficiaries" ToRole="Communities" />
+    <NavigationProperty Name="TypeOfBeneficiary" Relationship="CMSModel.FK_Beneficiaries_TypeOfBeneficiaries" FromRole="Beneficiaries" ToRole="TypeOfBeneficiaries" />
+    <NavigationProperty Name="SessionParticipants" Relationship="CMSModel.FK_SessionParticipants_Beneficiarys" FromRole="Beneficiaries" ToRole="SessionParticipants" />
+    <NavigationProperty Name="Organizations" Relationship="CMSModel.BeneficiaryOrganization" FromRole="Beneficiaries" ToRole="Organizations" />
+    <NavigationProperty Name="ProductiveSectors" Relationship="CMSModel.BeneficiarySector" FromRole="Beneficiaries" ToRole="ProductiveSector" />
+  </EntityType>
+  <EntityType Name="BeneficiaryClass">
+    <Key>
+      <PropertyRef Name="BeneficiaryClassID" />
+    </Key>
+    <Property Name="BeneficiaryClassID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Sessions" Relationship="CMSModel.FK_Sessions_BeneficiaryClasses" FromRole="BeneficiaryClasses" ToRole="Sessions" />
+    <NavigationProperty Name="Profiles" Relationship="CMSModel.ProfileClasses" FromRole="BeneficiaryClasses" ToRole="Profiles" />
+  </EntityType>
+  <EntityType Name="Community">
+    <Key>
+      <PropertyRef Name="CommunityID" />
+    </Key>
+    <Property Name="CommunityID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="MunicipalID" Type="Int32" />
+    <NavigationProperty Name="Beneficiaries" Relationship="CMSModel.FK_Beneficiaries_Communities1" FromRole="Communities" ToRole="Beneficiaries" />
+    <NavigationProperty Name="Municipality" Relationship="CMSModel.FK_Communities_Municipalities" FromRole="Communities" ToRole="Municipalities" />
+    <NavigationProperty Name="Organizations" Relationship="CMSModel.FK_Organizations_Communities" FromRole="Communities" ToRole="Organizations" />
+  </EntityType>
+  <EntityType Name="Municipality">
+    <Key>
+      <PropertyRef Name="MunicipalID" />
+    </Key>
+    <Property Name="MunicipalID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Communities" Relationship="CMSModel.FK_Communities_Municipalities" FromRole="Municipalities" ToRole="Communities" />
+  </EntityType>
+  <EntityType Name="Organization">
+    <Key>
+      <PropertyRef Name="OrganizationID" />
+    </Key>
+    <Property Name="OrganizationID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CommunityID" Type="Int32" Nullable="false" />
+    <Property Name="YearOfFormalization" Type="String" Nullable="false" MaxLength="2000" Unicode="false" FixedLength="false" />
+    <Property Name="YearofFoundation" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="NoOfEnrolledMembers" Type="Int32" />
+    <Property Name="NoOfActiveMembers" Type="Int32" />
+    <NavigationProperty Name="Community" Relationship="CMSModel.FK_Organizations_Communities" FromRole="Organizations" ToRole="Communities" />
+    <NavigationProperty Name="Beneficiaries" Relationship="CMSModel.BeneficiaryOrganization" FromRole="Organizations" ToRole="Beneficiaries" />
+  </EntityType>
+  <EntityType Name="ProductiveSector">
+    <Key>
+      <PropertyRef Name="SectorId" />
+    </Key>
+    <Property Name="SectorId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Beneficiaries" Relationship="CMSModel.BeneficiarySector" FromRole="ProductiveSector" ToRole="Beneficiaries" />
+  </EntityType>
+  <EntityType Name="Profile">
+    <Key>
+      <PropertyRef Name="ProfileID" />
+    </Key>
+    <Property Name="ProfileID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="TypeOfBeneficiaries" Relationship="CMSModel.BeneficiaryProfiles" FromRole="Profiles" ToRole="TypeOfBeneficiaries" />
+    <NavigationProperty Name="BeneficiaryClasses" Relationship="CMSModel.ProfileClasses" FromRole="Profiles" ToRole="BeneficiaryClasses" />
+    <NavigationProperty Name="TypeOfBeneficiaries1" Relationship="CMSModel.TypeOfBeneficiaryProfile" FromRole="Profiles" ToRole="TypeOfBeneficiaries" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="ProjectID" />
+    </Key>
+    <Property Name="ProjectID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Sessions" Relationship="CMSModel.FK_Sessions_Projects" FromRole="Projects" ToRole="Sessions" />
+  </EntityType>
+  <EntityType Name="SessionAttachment">
+    <Key>
+      <PropertyRef Name="SessionAttachmentID" />
+    </Key>
+    <Property Name="SessionAttachmentID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SessionID" Type="Int32" Nullable="false" />
+    <Property Name="AttachedDocumentURL" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Session" Relationship="CMSModel.FK_SessionAttachments_Sessions" FromRole="SessionAttachments" ToRole="Sessions" />
+  </EntityType>
+  <EntityType Name="SessionParticipant">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SessionID" Type="Int32" Nullable="false" />
+    <Property Name="BeneficiaryID" Type="Int32" Nullable="false" />
+    <Property Name="Attended" Type="Boolean" Nullable="false" />
+    <Property Name="Completed" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Beneficiary" Relationship="CMSModel.FK_SessionParticipants_Beneficiarys" FromRole="SessionParticipants" ToRole="Beneficiaries" />
+    <NavigationProperty Name="Session" Relationship="CMSModel.FK_SessionParticipants_Sessions" FromRole="SessionParticipants" ToRole="Sessions" />
+  </EntityType>
+  <EntityType Name="Session">
+    <Key>
+      <PropertyRef Name="SessionID" />
+    </Key>
+    <Property Name="SessionID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="BeneficiaryClassID" Type="Int32" Nullable="false" />
+    <Property Name="InitialDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Venue" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Place" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="TeacherID" Type="Int32" Nullable="false" />
+    <Property Name="ProjectID" Type="Int32" Nullable="false" />
+    <Property Name="SessionStatusID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="BeneficiaryClass" Relationship="CMSModel.FK_Sessions_BeneficiaryClasses" FromRole="Sessions" ToRole="BeneficiaryClasses" />
+    <NavigationProperty Name="Project" Relationship="CMSModel.FK_Sessions_Projects" FromRole="Sessions" ToRole="Projects" />
+    <NavigationProperty Name="SessionAttachments" Relationship="CMSModel.FK_SessionAttachments_Sessions" FromRole="Sessions" ToRole="SessionAttachments" />
+    <NavigationProperty Name="SessionParticipants" Relationship="CMSModel.FK_SessionParticipants_Sessions" FromRole="Sessions" ToRole="SessionParticipants" />
+    <NavigationProperty Name="SessionStatus" Relationship="CMSModel.FK_Sessions_SessionStatuses1" FromRole="Sessions" ToRole="SessionStatuses" />
+    <NavigationProperty Name="Teacher" Relationship="CMSModel.FK_Sessions_Teachers" FromRole="Session" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="SessionStatus">
+    <Key>
+      <PropertyRef Name="SessionStatusID" />
+    </Key>
+    <Property Name="SessionStatusID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Completed" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Sessions" Relationship="CMSModel.FK_Sessions_SessionStatuses1" FromRole="SessionStatuses" ToRole="Sessions" />
+  </EntityType>
+  <EntityType Name="TypeOfBeneficiary">
+    <Key>
+      <PropertyRef Name="TypeOfBeneficiaryID" />
+    </Key>
+    <Property Name="TypeOfBeneficiaryID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Beneficiaries" Relationship="CMSModel.FK_Beneficiaries_TypeOfBeneficiaries" FromRole="TypeOfBeneficiaries" ToRole="Beneficiaries" />
+    <NavigationProperty Name="Profiles" Relationship="CMSModel.BeneficiaryProfiles" FromRole="TypeOfBeneficiaries" ToRole="Profiles" />
+    <NavigationProperty Name="Profiles1" Relationship="CMSModel.TypeOfBeneficiaryProfile" FromRole="TypeOfBeneficiaries" ToRole="Profiles" />
+  </EntityType>
+  <Association Name="FK_Beneficiaries_Communities1">
+    <End Role="Communities" Type="CMSModel.Community" Multiplicity="1" />
+    <End Role="Beneficiaries" Type="CMSModel.Beneficiary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Communities">
+        <PropertyRef Name="CommunityID" />
+      </Principal>
+      <Dependent Role="Beneficiaries">
+        <PropertyRef Name="CommunityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Beneficiaries_TypeOfBeneficiaries">
+    <End Role="TypeOfBeneficiaries" Type="CMSModel.TypeOfBeneficiary" Multiplicity="0..1" />
+    <End Role="Beneficiaries" Type="CMSModel.Beneficiary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeOfBeneficiaries">
+        <PropertyRef Name="TypeOfBeneficiaryID" />
+      </Principal>
+      <Dependent Role="Beneficiaries">
+        <PropertyRef Name="TypeOfBeneficiaryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SessionParticipants_Beneficiarys">
+    <End Role="Beneficiaries" Type="CMSModel.Beneficiary" Multiplicity="1" />
+    <End Role="SessionParticipants" Type="CMSModel.SessionParticipant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Beneficiaries">
+        <PropertyRef Name="BeneficiaryID" />
+      </Principal>
+      <Dependent Role="SessionParticipants">
+        <PropertyRef Name="BeneficiaryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sessions_BeneficiaryClasses">
+    <End Role="BeneficiaryClasses" Type="CMSModel.BeneficiaryClass" Multiplicity="1" />
+    <End Role="Sessions" Type="CMSModel.Session" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BeneficiaryClasses">
+        <PropertyRef Name="BeneficiaryClassID" />
+      </Principal>
+      <Dependent Role="Sessions">
+        <PropertyRef Name="BeneficiaryClassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Communities_Municipalities">
+    <End Role="Municipalities" Type="CMSModel.Municipality" Multiplicity="0..1" />
+    <End Role="Communities" Type="CMSModel.Community" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Municipalities">
+        <PropertyRef Name="MunicipalID" />
+      </Principal>
+      <Dependent Role="Communities">
+        <PropertyRef Name="MunicipalID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Organizations_Communities">
+    <End Role="Communities" Type="CMSModel.Community" Multiplicity="1" />
+    <End Role="Organizations" Type="CMSModel.Organization" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Communities">
+        <PropertyRef Name="CommunityID" />
+      </Principal>
+      <Dependent Role="Organizations">
+        <PropertyRef Name="CommunityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sessions_Projects">
+    <End Role="Projects" Type="CMSModel.Project" Multiplicity="1" />
+    <End Role="Sessions" Type="CMSModel.Session" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ProjectID" />
+      </Principal>
+      <Dependent Role="Sessions">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SessionAttachments_Sessions">
+    <End Role="Sessions" Type="CMSModel.Session" Multiplicity="1" />
+    <End Role="SessionAttachments" Type="CMSModel.SessionAttachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sessions">
+        <PropertyRef Name="SessionID" />
+      </Principal>
+      <Dependent Role="SessionAttachments">
+        <PropertyRef Name="SessionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SessionParticipants_Sessions">
+    <End Role="Sessions" Type="CMSModel.Session" Multiplicity="1" />
+    <End Role="SessionParticipants" Type="CMSModel.SessionParticipant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sessions">
+        <PropertyRef Name="SessionID" />
+      </Principal>
+      <Dependent Role="SessionParticipants">
+        <PropertyRef Name="SessionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sessions_SessionStatuses1">
+    <End Role="SessionStatuses" Type="CMSModel.SessionStatus" Multiplicity="1" />
+    <End Role="Sessions" Type="CMSModel.Session" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SessionStatuses">
+        <PropertyRef Name="SessionStatusID" />
+      </Principal>
+      <Dependent Role="Sessions">
+        <PropertyRef Name="SessionStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BeneficiaryOrganization">
+    <End Role="Beneficiaries" Type="CMSModel.Beneficiary" Multiplicity="*" />
+    <End Role="Organizations" Type="CMSModel.Organization" Multiplicity="*" />
+  </Association>
+  <Association Name="BeneficiaryProfiles">
+    <End Role="Profiles" Type="CMSModel.Profile" Multiplicity="*" />
+    <End Role="TypeOfBeneficiaries" Type="CMSModel.TypeOfBeneficiary" Multiplicity="*" />
+  </Association>
+  <Association Name="BeneficiarySector">
+    <End Role="Beneficiaries" Type="CMSModel.Beneficiary" Multiplicity="*" />
+    <End Role="ProductiveSector" Type="CMSModel.ProductiveSector" Multiplicity="*" />
+  </Association>
+  <Association Name="ProfileClasses">
+    <End Role="BeneficiaryClasses" Type="CMSModel.BeneficiaryClass" Multiplicity="*" />
+    <End Role="Profiles" Type="CMSModel.Profile" Multiplicity="*" />
+  </Association>
+  <Association Name="TypeOfBeneficiaryProfile">
+    <End Role="Profiles" Type="CMSModel.Profile" Multiplicity="*" />
+    <End Role="TypeOfBeneficiaries" Type="CMSModel.TypeOfBeneficiary" Multiplicity="*" />
+  </Association>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="principal_id" Nullable="false" />
+    <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="version" />
+    <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Teacher">
+    <Key>
+      <PropertyRef Name="TeacherID" />
+    </Key>
+    <Property Type="Int32" Name="TeacherID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Photo" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IdentificationCardNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Address" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Telephone" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Sessions" Relationship="CMSModel.FK_Sessions_Teachers" FromRole="Teacher" ToRole="Session" />
+  </EntityType>
+  <Association Name="FK_Sessions_Teachers">
+    <End Type="CMSModel.Teacher" Role="Teacher" Multiplicity="1" />
+    <End Type="CMSModel.Session" Role="Session" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherID" />
+      </Principal>
+      <Dependent Role="Session">
+        <PropertyRef Name="TeacherID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
